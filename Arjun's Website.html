@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun Jivanjee</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+        body {
+            font-family: 'VTC Carrie', 'Courier Prime', monospace;
+            background-color: #f1f1ef;
+            color: #333;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 40px 60px;
+            height: 100vh;
+            position: relative;
+        }
+
+        .name {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #333;
+        }
+
+        .navigation {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #333;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-button {
+            background: none;
+            border: none;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #333;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0s;
+        }
+
+        .nav-button:hover {
+            font-style: italic;
+            transform: skew(-10deg);
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #333;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0s;
+        }
+
+        .back-button:hover {
+            font-style: italic;
+            transform: skew(-10deg);
+        }
+
+        .page-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 24px;
+            color: #333;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 30px 30px;
+                gap: 40px;
+            }
+            
+            .name {
+                font-size: 24px;
+            }
+            
+            .nav-button {
+                font-size: 24px;
+            }
+            
+            .back-button {
+                font-size: 18px;
+                top: 30px;
+                left: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="name">ARJUN JIVANJEE</div>
+            <div class="navigation">
+                <button class="nav-button" onclick="showPage('projects')">PROJECTS,</button>
+                <button class="nav-button" onclick="showPage('books')">BOOKS</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Page -->
+    <div id="projects" class="page">
+        <button class="back-button" onclick="showPage('home')">← BACK</button>
+    </div>
+
+    <!-- Books Page -->
+    <div id="books" class="page">
+        <button class="back-button" onclick="showPage('home')">← BACK</button>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
