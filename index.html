@@ -11,7 +11,7 @@
     :root {
       --font-heading: 'Bebas Neue', sans-serif;
       --font-body: 'Playfair Display', serif;
-      --text-black: rgba(0, 0, 0, 1);
+      --text-color: #313638;
       --bg: #f1f1ef;
     }
 
@@ -24,7 +24,7 @@
     body {
       font-family: var(--font-heading);
       background-color: var(--bg);
-      color: var(--text-black);
+      color: var(--text-color);
       height: 100vh;
       overflow: hidden;
     }
@@ -44,6 +44,7 @@
       text-transform: none;
       line-height: 1.4;
       font-family: var(--font-heading);
+      color: var(--text-color);
     }
 
     .navigation {
@@ -53,6 +54,7 @@
       display: flex;
       gap: 20px;
       font-family: var(--font-heading);
+      color: var(--text-color);
     }
 
     .nav-button {
@@ -64,7 +66,7 @@
       cursor: pointer;
       font-family: inherit;
       line-height: 1.4;
-      color: var(--text-black);
+      color: var(--text-color);
       transition: all 0s;
     }
 
@@ -93,7 +95,7 @@
       cursor: pointer;
       font-family: var(--font-heading);
       line-height: 1.4;
-      color: var(--text-black);
+      color: var(--text-color);
       transition: all 0s;
     }
 
@@ -115,7 +117,7 @@
       font-size: 30px;
       font-weight: normal;
       font-family: var(--font-body);
-      color: var(--text-black);
+      color: var(--text-color);
       line-height: 1.3;
       cursor: pointer;
       transition: all 0s;
@@ -163,8 +165,7 @@
     <div class="container">
       <div class="name">Arjun Jivanjee</div>
       <div class="navigation">
-        <button class="nav-button" onclick="showPage('projects')">Books,</button>
-        <button class="nav-button" onclick="showPage('books')">Projects</button>
+        <button class="nav-button" onclick="showPage('projects')">Books, Projects</button>
       </div>
     </div>
   </div>
