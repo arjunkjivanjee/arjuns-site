@@ -1,206 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arjun Jivanjee</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23f1f1ef'/></svg>">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arjun Jivanjee</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23f1f1ef'/></svg>">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    :root {
+      --font-heading: 'Bebas Neue', sans-serif;
+      --font-body: 'Playfair Display', serif;
+      --text-black: rgba(0, 0, 0, 1);
+      --bg: #f1f1ef;
+    }
 
-        body {
-            font-family: 'Bebas Neue', sans-serif;
-            background-color: #f1f1ef;
-            color: #313638;
-            height: 100vh;
-            overflow: hidden;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 40px 60px;
-            height: 100vh;
-            position: relative;
-        }
+    body {
+      font-family: var(--font-heading);
+      background-color: var(--bg);
+      color: var(--text-black);
+      height: 100vh;
+      overflow: hidden;
+    }
 
-        .name {
-            font-size: 36px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #313638;
-            line-height: 1.4;
-        }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px 60px;
+      height: 100vh;
+      position: relative;
+    }
 
-        .navigation {
-            font-size: 36px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #313638;
-            display: flex;
-            gap: 20px;
-        }
+    .name {
+      font-size: 36px;
+      font-weight: normal;
+      text-transform: none;
+      line-height: 1.4;
+      font-family: var(--font-heading);
+    }
 
-        .nav-button {
-            background: none;
-            border: none;
-            font-size: 36px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #313638;
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0s;
-            line-height: 1.4;
-        }
+    .navigation {
+      font-size: 36px;
+      font-weight: normal;
+      text-transform: none;
+      display: flex;
+      gap: 20px;
+      font-family: var(--font-heading);
+    }
 
-        .nav-button:hover {
-            font-style: italic;
-            transform: skew(-10deg);
-        }
+    .nav-button {
+      background: none;
+      border: none;
+      font-size: 36px;
+      font-weight: normal;
+      text-transform: none;
+      cursor: pointer;
+      font-family: inherit;
+      line-height: 1.4;
+      color: var(--text-black);
+      transition: all 0s;
+    }
 
-        .page {
-            display: none;
-        }
+    .nav-button:hover {
+      font-style: italic;
+      transform: skew(-10deg);
+    }
 
-        .page.active {
-            display: block;
-        }
+    .page {
+      display: none;
+    }
 
-        .back-button {
-            position: absolute;
-            top: 40px;
-            left: 60px;
-            background: none;
-            border: none;
-            font-size: 36px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #313638;
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0s;
-            line-height: 1.4;
-        }
+    .page.active {
+      display: block;
+    }
 
-        .back-button:hover {
-            font-style: italic;
-            transform: skew(-10deg);
-        }
+    .back-button {
+      position: absolute;
+      top: 40px;
+      left: 60px;
+      background: none;
+      border: none;
+      font-size: 36px;
+      font-weight: normal;
+      text-transform: none;
+      cursor: pointer;
+      font-family: var(--font-heading);
+      line-height: 1.4;
+      color: var(--text-black);
+      transition: all 0s;
+    }
 
-        .page-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-size: 24px;
-            color: #313638;
-        }
+    .back-button:hover {
+      font-style: italic;
+      transform: skew(-10deg);
+    }
 
-        .book-list {
-            position: absolute;
-            bottom: 60px;
-            left: 60px;
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
+    .book-list {
+      position: absolute;
+      bottom: 60px;
+      left: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
 
-        .book-item {
-            font-size: 36px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: none;
-            color: #313638;
-            line-height: 1.1;
-            cursor: pointer;
-            transition: all 0s;
-        }
+    .book-item {
+      font-size: 30px;
+      font-weight: normal;
+      font-family: var(--font-body);
+      color: var(--text-black);
+      line-height: 1.3;
+      cursor: pointer;
+      transition: all 0s;
+    }
 
-        .book-item:hover {
-            font-style: italic;
-            transform: skew(-10deg);
-        }
+    .book-item:hover {
+      font-style: italic;
+      transform: skew(-10deg);
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                padding: 30px 30px;
-                gap: 40px;
-            }
+    @media (max-width: 1440px) {
+      .container {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
 
-            .name {
-                font-size: 24px;
-            }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 30px 16px;
+        gap: 40px;
+      }
 
-            .nav-button {
-                font-size: 24px;
-            }
+      .name,
+      .nav-button,
+      .back-button {
+        font-size: 24px;
+      }
 
-            .back-button {
-                font-size: 24px;
-                top: 30px;
-                left: 30px;
-            }
+      .book-list {
+        bottom: 30px;
+        left: 16px;
+      }
 
-            .book-list {
-                bottom: 30px;
-                left: 30px;
-            }
-
-            .book-item {
-                font-size: 24px;
-            }
-        }
-    </style>
+      .book-item {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Home Page -->
-    <div id="home" class="page active">
-        <div class="container">
-            <div class="name">ARJUN JIVANJEE</div>
-            <div class="navigation">
-                <button class="nav-button" onclick="showPage('projects')">PROJECTS,</button>
-                <button class="nav-button" onclick="showPage('books')">BOOKS</button>
-            </div>
-        </div>
+  <!-- Home Page -->
+  <div id="home" class="page active">
+    <div class="container">
+      <div class="name">Arjun Jivanjee</div>
+      <div class="navigation">
+        <button class="nav-button" onclick="showPage('projects')">Books,</button>
+        <button class="nav-button" onclick="showPage('books')">Projects</button>
+      </div>
     </div>
+  </div>
 
-    <!-- Projects Page -->
-    <div id="projects" class="page">
-        <button class="back-button" onclick="showPage('home')">BACK</button>
+  <!-- Projects Page -->
+  <div id="projects" class="page">
+    <button class="back-button" onclick="showPage('home')">Back</button>
+  </div>
+
+  <!-- Books Page -->
+  <div id="books" class="page">
+    <button class="back-button" onclick="showPage('home')">Back</button>
+    <div class="book-list">
+      <div class="book-item">Elon Musk</div>
+      <div class="book-item">Man’s Search for Meaning</div>
+      <div class="book-item">The Almanack of Naval Ravikant</div>
+      <div class="book-item">Feynman’s Rainbow</div>
+      <div class="book-item">Steve Jobs</div>
     </div>
+  </div>
 
-    <!-- Books Page -->
-    <div id="books" class="page">
-        <button class="back-button" onclick="showPage('home')">BACK</button>
-        <div class="book-list">
-            <div class="book-item">Elon Musk</div>
-            <div class="book-item">Almanack of Naval Ravikant</div>
-            <div class="book-item">Feynman's Rainbow</div>
-        </div>
-    </div>
-
-    <script>
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active'));
-
-            // Show selected page
-            document.getElementById(pageId).classList.add('active');
-        }
-    </script>
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
