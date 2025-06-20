@@ -6,16 +6,16 @@
     <title>Arjun Jivanjee</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23f1f1ef'/></svg>">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
-
         body {
-            font-family: 'VTC Carrie', 'Courier Prime', monospace;
+            font-family: 'Bebas Neue', sans-serif;
             background-color: #f1f1ef;
             color: #313638;
             height: 100vh;
@@ -139,26 +139,26 @@
                 padding: 30px 30px;
                 gap: 40px;
             }
-            
+
             .name {
                 font-size: 24px;
             }
-            
+
             .nav-button {
                 font-size: 24px;
             }
-            
+
             .back-button {
                 font-size: 24px;
                 top: 30px;
                 left: 30px;
             }
-            
+
             .book-list {
                 bottom: 30px;
                 left: 30px;
             }
-            
+
             .book-item {
                 font-size: 24px;
             }
@@ -197,7 +197,7 @@
             // Hide all pages
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.remove('active'));
-            
+
             // Show selected page
             document.getElementById(pageId).classList.add('active');
         }
