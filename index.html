@@ -9,34 +9,29 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23f1f1ef'/></svg>">
 
   <style>
-    /* ===== IMPORT FONTS ===== */
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap');
 
-    /* ===== CSS VARIABLES ===== */
     :root {
       --font-heading: 'Bebas Neue', sans-serif;
       --font-body: 'Playfair Display', serif;
-      --text-black: #04080F; /* <-- Replace this to change text color */
-      --bg: #f1f1ef;          /* <-- Replace this to change background color */
+      --text-black: #04080F;
+      --bg: #f1f1ef;
     }
 
-    /* ===== GLOBAL RESETS ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* ===== BODY STYLES ===== */
     body {
-      font-family: var(--font-heading); /* <-- Change default font here */
+      font-family: var(--font-heading);
       background-color: var(--bg);
       color: var(--text-black);
       height: 100vh;
       overflow: hidden;
     }
 
-    /* ===== CONTAINER ===== */
     .container {
       display: flex;
       justify-content: space-between;
@@ -46,7 +41,6 @@
       position: relative;
     }
 
-    /* ===== NAME (TOP LEFT TITLE) ===== */
     .name {
       font-size: 36px;
       font-weight: normal;
@@ -55,7 +49,6 @@
       font-family: var(--font-heading);
     }
 
-    /* ===== NAVIGATION BAR ===== */
     .navigation {
       font-size: 36px;
       font-weight: normal;
@@ -74,7 +67,7 @@
       cursor: pointer;
       font-family: inherit;
       line-height: 1.4;
-      color: var(--text-black); /* <-- Text color for nav buttons */
+      color: var(--text-black);
       transition: all 0s;
     }
 
@@ -83,7 +76,6 @@
       transform: skew(-10deg);
     }
 
-    /* ===== PAGE VIEW TOGGLING ===== */
     .page {
       display: none;
     }
@@ -92,7 +84,6 @@
       display: block;
     }
 
-    /* ===== BACK BUTTON ===== */
     .back-button {
       position: absolute;
       top: 40px;
@@ -114,7 +105,6 @@
       transform: skew(-10deg);
     }
 
-    /* ===== BOOK LIST STYLES ===== */
     .book-list {
       position: absolute;
       bottom: 60px;
@@ -139,7 +129,6 @@
       transform: skew(-10deg);
     }
 
-    /* ===== RESPONSIVE DESIGN (TABLET & DESKTOP) ===== */
     @media (max-width: 1440px) {
       .container {
         padding-left: 24px;
@@ -147,7 +136,6 @@
       }
     }
 
-    /* ===== RESPONSIVE DESIGN (MOBILE) ===== */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -179,18 +167,14 @@
     <div class="container">
       <div class="name">Arjun Jivanjee</div>
       <div class="navigation">
-        <button class="nav-button" onclick="showPage('projects')">Books,</button>
+        <!-- Swapped buttons -->
         <button class="nav-button" onclick="showPage('books')">Projects</button>
+        <button class="nav-button" onclick="showPage('projects')">Books</button>
       </div>
     </div>
   </div>
 
-  <!-- ===== PROJECTS PAGE ===== -->
-  <div id="projects" class="page">
-    <button class="back-button" onclick="showPage('home')">Back</button>
-  </div>
-
-  <!-- ===== BOOKS PAGE ===== -->
+  <!-- ===== BOOKS PAGE (now used for PROJECTS) ===== -->
   <div id="books" class="page">
     <button class="back-button" onclick="showPage('home')">Back</button>
     <div class="book-list">
@@ -202,7 +186,12 @@
     </div>
   </div>
 
-  <!-- ===== SIMPLE JAVASCRIPT PAGE TOGGLING FUNCTION ===== -->
+  <!-- ===== PROJECTS PAGE (currently empty) ===== -->
+  <div id="projects" class="page">
+    <button class="back-button" onclick="showPage('home')">Back</button>
+  </div>
+
+  <!-- ===== SCRIPT TO SWITCH PAGES ===== -->
   <script>
     function showPage(pageId) {
       const pages = document.querySelectorAll('.page');
