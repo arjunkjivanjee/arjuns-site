@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arjun Jivanjee</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23f1f1ef'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23f1f1ef'/></svg>'"/>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap');
@@ -32,13 +32,11 @@
       overflow: hidden;
     }
 
-    .container {
+    .header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       padding: 40px 60px;
-      height: 100vh;
-      position: relative;
     }
 
     .name {
@@ -52,7 +50,6 @@
     .navigation {
       font-size: 36px;
       font-weight: normal;
-      text-transform: none;
       display: flex;
       gap: 20px;
       font-family: var(--font-heading);
@@ -63,7 +60,6 @@
       border: none;
       font-size: 36px;
       font-weight: normal;
-      text-transform: none;
       cursor: pointer;
       font-family: inherit;
       line-height: 1.4;
@@ -76,6 +72,12 @@
       transform: skew(-10deg);
     }
 
+    .container {
+      height: calc(100vh - 100px);
+      padding: 0 60px;
+      position: relative;
+    }
+
     .page {
       display: none;
     }
@@ -84,31 +86,10 @@
       display: block;
     }
 
-    .back-button {
-      position: absolute;
-      top: 40px;
-      left: 60px;
-      background: none;
-      border: none;
-      font-size: 36px;
-      font-weight: normal;
-      text-transform: none;
-      cursor: pointer;
-      font-family: var(--font-heading);
-      line-height: 1.4;
-      color: var(--text-black);
-      transition: all 0s;
-    }
-
-    .back-button:hover {
-      font-style: italic;
-      transform: skew(-10deg);
-    }
-
     .book-list {
       position: absolute;
       bottom: 60px;
-      left: 60px;
+      left: 0;
       display: flex;
       flex-direction: column;
       gap: 2px;
@@ -130,28 +111,31 @@
     }
 
     @media (max-width: 1440px) {
-      .container {
+      .header, .container {
         padding-left: 24px;
         padding-right: 24px;
       }
     }
 
     @media (max-width: 768px) {
-      .container {
+      .header {
         flex-direction: column;
         padding: 30px 16px;
-        gap: 40px;
+        gap: 20px;
       }
 
       .name,
-      .nav-button,
-      .back-button {
+      .nav-button {
         font-size: 24px;
+      }
+
+      .container {
+        padding: 0 16px;
       }
 
       .book-list {
         bottom: 30px;
-        left: 16px;
+        left: 0;
       }
 
       .book-item {
@@ -162,21 +146,22 @@
 </head>
 
 <body>
-  <!-- ===== HOME PAGE ===== -->
-  <div id="home" class="page active">
-    <div class="container">
-      <button class="nav-button name" onclick="showPage('home')">Arjun Jivanjee</button>
-      <div class="navigation">
-        <!-- Swapped buttons -->
-        <button class="nav-button" onclick="showPage('books')">Projects</button>
-        <button class="nav-button" onclick="showPage('projects')">Books</button>
-      </div>
+  <!-- ===== GLOBAL MENU BAR ===== -->
+  <div class="header">
+    <button class="nav-button name" onclick="showPage('home')">Arjun Jivanjee</button>
+    <div class="navigation">
+      <button class="nav-button" onclick="showPage('books')">Projects</button>
+      <button class="nav-button" onclick="showPage('projects')">Books</button>
     </div>
   </div>
 
-  <!-- ===== BOOKS PAGE (now used for PROJECTS) ===== -->
-  <div id="books" class="page">
-    <button class="back-button" onclick="showPage('home')">Back</button>
+  <!-- ===== HOME PAGE ===== -->
+  <div id="home" class="container page active">
+    <!-- Empty or welcome message -->
+  </div>
+
+  <!-- ===== BOOKS PAGE (used for PROJECTS) ===== -->
+  <div id="books" class="container page">
     <div class="book-list">
       <div class="book-item">Elon Musk</div>
       <div class="book-item">Man’s Search for Meaning</div>
@@ -187,8 +172,8 @@
   </div>
 
   <!-- ===== PROJECTS PAGE (currently empty) ===== -->
-  <div id="projects" class="page">
-    <button class="back-button" onclick="showPage('home')">Back</button>
+  <div id="projects" class="container page">
+    <!-- Add project content here -->
   </div>
 
   <!-- ===== SCRIPT TO SWITCH PAGES ===== -->
