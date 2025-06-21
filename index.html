@@ -86,30 +86,6 @@
       display: block;
     }
 
-    .book-list {
-      position: absolute;
-      bottom: 60px;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .book-item {
-      font-size: 30px;
-      font-weight: normal;
-      font-family: var(--font-body);
-      color: var(--text-black);
-      line-height: 1.3;
-      cursor: pointer;
-      transition: all 0s;
-    }
-
-    .book-item:hover {
-      font-style: italic;
-      transform: skew(-10deg);
-    }
-
     @media (max-width: 1440px) {
       .header, .container {
         padding-left: 24px;
@@ -132,15 +108,6 @@
       .container {
         padding: 0 16px;
       }
-
-      .book-list {
-        bottom: 30px;
-        left: 0;
-      }
-
-      .book-item {
-        font-size: 24px;
-      }
     }
   </style>
 </head>
@@ -159,15 +126,9 @@
     <!-- Empty or welcome message -->
   </div>
 
-  <!-- ===== BOOKS PAGE ===== -->
+  <!-- ===== BOOKS PAGE (now empty) ===== -->
   <div id="books" class="container page">
-    <div class="book-list">
-      <div class="book-item">Elon Musk</div>
-      <div class="book-item">Man’s Search for Meaning</div>
-      <div class="book-item">The Almanack of Naval Ravikant</div>
-      <div class="book-item">Feynman’s Rainbow</div>
-      <div class="book-item">Steve Jobs</div>
-    </div>
+    <!-- Book list removed -->
   </div>
 
   <!-- ===== SCRIPT TO SWITCH PAGES ===== -->
