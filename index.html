@@ -72,6 +72,28 @@
       transform: skew(-5deg);
     }
 
+    .banner {
+      background-color: var(--bg);
+      text-align: center;
+      padding: 20px 40px;
+    }
+
+    .divider {
+      height: 4px;
+      width: 80px;
+      background-color: var(--text-black);
+      margin: 12px auto;
+    }
+
+    .north-star {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
     .container {
       height: calc(100vh - 100px);
       padding: 0 60px;
@@ -106,6 +128,10 @@
         padding-left: 24px;
         padding-right: 24px;
       }
+
+      .banner {
+        padding: 20px 24px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -127,6 +153,10 @@
       .book-item {
         font-size: 24px;
       }
+
+      .north-star {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -140,12 +170,21 @@
     </div>
   </div>
 
+  <!-- ===== NORTH STAR BANNER ===== -->
+  <div class="banner">
+    <div class="divider"></div>
+    <p class="north-star">
+      redefine what’s possible. explore frontiers. create and preserve beautiful things. all in service of humanity.
+    </p>
+    <div class="divider"></div>
+  </div>
+
   <!-- ===== HOME PAGE ===== -->
   <div id="home" class="container page active">
     <!-- Empty or welcome message -->
   </div>
 
-  <!-- ===== BOOKS PAGE (now empty) ===== -->
+  <!-- ===== BOOKS PAGE ===== -->
   <div id="books" class="container page">
     <!-- Book list removed -->
   </div>
