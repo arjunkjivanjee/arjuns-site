@@ -37,6 +37,7 @@
       background-color: var(--text-black);
       padding: 12px 24px;
       text-align: center;
+      overflow-x: auto;
     }
 
     .north-star {
@@ -45,8 +46,10 @@
       font-size: 24px;
       color: var(--text-white);
       line-height: 1.5;
-      max-width: 1000px;
-      margin: 0 auto;
+      white-space: nowrap;
+      overflow-x: auto;
+      max-width: 100%;
+      display: inline-block;
     }
 
     .header {
@@ -149,7 +152,7 @@
       }
 
       .north-star {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   </style>
