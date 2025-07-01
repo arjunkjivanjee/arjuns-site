@@ -35,7 +35,7 @@
     }
 
     .banner {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: var(--text-black);
       padding: 9px 20px;
       text-align: center;
       display: flex;
@@ -59,7 +59,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 30px 60px 40px 60px;
+      padding: 30px 60px 40px 60px; /* top padding reduced from 40px to 30px */
     }
 
     .name {
@@ -179,14 +179,12 @@
 
   <!-- ===== HOME PAGE ===== -->
   <div id="home" class="container page active">
-    <!-- Home content (intentionally left empty) -->
+    <!-- Empty or welcome message -->
   </div>
 
   <!-- ===== BOOKS PAGE ===== -->
   <div id="books" class="container page">
-    <p class="book-item">Greenlights by Matthew McConaughey</p>
-    <p class="book-item">Man's Search for Meaning by Viktor E. Frankl</p>
-    <!-- Add more book items here -->
+    <!-- Book list removed -->
   </div>
 
   <!-- ===== SCRIPT TO SWITCH PAGES ===== -->
