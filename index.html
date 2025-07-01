@@ -27,14 +27,15 @@
 
     body {
       font-family: var(--font-heading);
-      background-color: var(--bg);
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
       color: var(--text-black);
       min-height: 100vh;
       overflow-x: hidden;
     }
 
     .banner {
-      background-color: var(--text-black);
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 9px 20px;
       text-align: center;
       display: flex;
@@ -58,7 +59,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 30px 60px 40px 60px; /* top padding reduced from 40px to 30px */
+      padding: 30px 60px 40px 60px;
     }
 
     .name {
@@ -97,6 +98,9 @@
     .container {
       padding: 40px 60px;
       position: relative;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      margin: 20px;
     }
 
     .page {
@@ -179,11 +183,14 @@
   <!-- ===== HOME PAGE ===== -->
   <div id="home" class="container page active">
     <!-- Empty or welcome message -->
+    <p>Welcome to my world. Let's build something extraordinary.</p>
   </div>
 
   <!-- ===== BOOKS PAGE ===== -->
   <div id="books" class="container page">
-    <!-- Book list removed -->
+    <p class="book-item">Greenlights by Matthew McConaughey</p>
+    <p class="book-item">Man's Search for Meaning by Viktor E. Frankl</p>
+    <!-- Add more book items here -->
   </div>
 
   <!-- ===== SCRIPT TO SWITCH PAGES ===== -->
