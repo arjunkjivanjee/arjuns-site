@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arjun Jivanjee</title>
 
-  <!-- ===== FAVICON (simple white circle, changeable) ===== -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23f1f1ef'/%3E%3C/svg%3E">
 
-  <!-- ===== FONTS ===== -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== VARIABLES ===== */
     :root {
-      --font-heading: 'Bebas Neue', sans-serif;
+      --font-heading: 'Playfair Display', serif;
       --font-body: 'Playfair Display', serif;
       --text-black: #04080F;
       --text-white: #f1f1ef;
       --bg: #ffffff;
     }
 
-    /* ===== BASE STYLES ===== */
     * {
       margin: 0;
       padding: 0;
@@ -36,26 +32,42 @@
       overflow-x: hidden;
     }
 
-    /* ===== MAIN HEADLINE ===== */
+    /* === MAIN SECTION === */
     .main {
-      padding: 100px 60px;
-      min-height: calc(100vh - 60px);
+      padding: 80px 60px 140px 60px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
     }
 
     .headline {
-      font-family: var(--font-body);
-      font-size: 56px;
-      line-height: 1.2;
-      max-width: 800px;
+      font-family: var(--font-heading);
+      max-width: 60%;
+      font-size: 60px;
+      line-height: 1.1;
     }
 
-    .highlight {
+    .headline .dash-line {
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    .headline .italic {
       font-style: italic;
     }
 
-    /* ===== BOTTOM SCROLLING BAND ===== */
+    /* === IMAGE (OPTIONAL) === */
+    .image {
+      max-width: 35%;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* === SCROLLING VALUES === */
     .bottom-band-wrapper {
       position: fixed;
       bottom: 0;
@@ -70,7 +82,6 @@
       opacity: 0.75;
       padding: 16px 0;
       z-index: 20;
-      background: transparent;
     }
 
     .bottom-band {
@@ -78,7 +89,6 @@
       animation: scroll-left 60s linear infinite;
     }
 
-    /* Smooth continuous scrolling */
     @keyframes scroll-left {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -88,14 +98,15 @@
       margin: 0 32px;
     }
 
-    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .main {
-        padding: 80px 24px;
+        flex-direction: column;
+        padding: 60px 24px;
       }
 
       .headline {
-        font-size: 36px;
+        font-size: 40px;
+        max-width: 100%;
       }
 
       .bottom-band-wrapper {
@@ -106,27 +117,32 @@
       .bottom-band span {
         margin: 0 20px;
       }
+
+      .image {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ===== MAIN SECTION ===== -->
   <div class="main">
     <div class="headline">
-      WE BACK <br> — THE MOST <span class="highlight">DISRUPTIVE</span><br> FOUNDERS
+      WE BACK <br>
+      <span class="dash-line">—</span>THE MOST <br>
+      <span class="italic">DISRUPTIVE</span><br>
+      FOUNDERS
+    </div>
+
+    <!-- Optional astronaut image for layout reference -->
+    <div class="image">
+      <img src="your-image.jpg" alt="astronaut">
     </div>
   </div>
 
-  <!-- ===== BOTTOM SCROLLING MOTTO ===== -->
   <div class="bottom-band-wrapper">
     <div class="bottom-band">
-      <!-- Duplicated for smooth seamless scrolling -->
-      <span>Endure and Conquer</span> •
-      <span>Have Unimpeachable Character</span> •
-      <span>See Reality Clearly</span> •
-      <span>Build in Service of Others</span> •
       <span>Endure and Conquer</span> •
       <span>Have Unimpeachable Character</span> •
       <span>See Reality Clearly</span> •
