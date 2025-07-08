@@ -3,10 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+  <title>Arjun Jivanjee</title>
+
+  <!-- ===== FAVICON (simple white circle, changeable) ===== -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23f1f1ef'/%3E%3C/svg%3E">
+
+  <!-- ===== FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap" rel="stylesheet">
 
   <style>
+    /* ===== VARIABLES ===== */
+    :root {
+      --font-heading: 'Bebas Neue', sans-serif;
+      --font-body: 'Playfair Display', serif;
+      --text-black: #04080F;
+      --text-white: #f1f1ef;
+      --bg: #ffffff;
+    }
+
+    /* ===== BASE STYLES ===== */
     * {
       margin: 0;
       padding: 0;
@@ -14,33 +29,33 @@
     }
 
     body {
-      font-family: 'Playfair Display', serif;
-      background: white;
-      color: #111;
-      overflow-x: hidden;
+      background-color: var(--bg);
+      color: var(--text-black);
+      font-family: var(--font-body);
       font-weight: 400;
+      overflow-x: hidden;
     }
 
+    /* ===== MAIN HEADLINE ===== */
     .main {
-      padding: 100px 80px;
+      padding: 100px 60px;
       min-height: calc(100vh - 60px);
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
     }
 
     .headline {
-      font-family: 'Playfair Display', serif;
+      font-family: var(--font-body);
       font-size: 56px;
-      max-width: 800px;
       line-height: 1.2;
-      font-weight: 400;
+      max-width: 800px;
     }
 
     .highlight {
       font-style: italic;
     }
 
+    /* ===== BOTTOM SCROLLING BAND ===== */
     .bottom-band-wrapper {
       position: fixed;
       bottom: 0;
@@ -48,28 +63,24 @@
       right: 0;
       overflow: hidden;
       white-space: nowrap;
-      font-family: 'Playfair Display', serif;
+      font-family: var(--font-body);
       font-size: 26px;
       text-transform: uppercase;
       color: #777;
       opacity: 0.75;
-      z-index: 20;
       padding: 16px 0;
+      z-index: 20;
       background: transparent;
-      font-weight: 400;
     }
 
     .bottom-band {
       display: inline-block;
-      animation: scroll-left 80s linear infinite;
+      animation: scroll-left 60s linear infinite;
     }
 
-    .bottom-band-wrapper:hover .bottom-band {
-      animation-play-state: paused;
-    }
-
+    /* Smooth continuous scrolling */
     @keyframes scroll-left {
-      0% { transform: translateX(0%); }
+      0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
 
@@ -77,10 +88,14 @@
       margin: 0 32px;
     }
 
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
+      .main {
+        padding: 80px 24px;
+      }
+
       .headline {
         font-size: 36px;
-        padding-right: 40px;
       }
 
       .bottom-band-wrapper {
@@ -94,16 +109,24 @@
     }
   </style>
 </head>
+
 <body>
 
+  <!-- ===== MAIN SECTION ===== -->
   <div class="main">
     <div class="headline">
       WE BACK <br> — THE MOST <span class="highlight">DISRUPTIVE</span><br> FOUNDERS
     </div>
   </div>
 
+  <!-- ===== BOTTOM SCROLLING MOTTO ===== -->
   <div class="bottom-band-wrapper">
     <div class="bottom-band">
+      <!-- Duplicated for smooth seamless scrolling -->
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span> •
       <span>Endure and Conquer</span> •
       <span>Have Unimpeachable Character</span> •
       <span>See Reality Clearly</span> •
