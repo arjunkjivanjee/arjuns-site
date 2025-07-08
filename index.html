@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -15,90 +14,31 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Playfair Display', serif;
       background: white;
       color: #111;
       overflow-x: hidden;
     }
 
-    .sidebar {
+    .side-name {
       position: fixed;
+      top: 50%;
       left: 0;
-      top: 0;
-      bottom: 0;
-      width: 80px;
-      background: #fff;
-      border-right: 2px solid #111;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 10;
-      transition: width 0.3s ease;
-      overflow: hidden;
-    }
-
-    .sidebar.expanded {
-      width: 240px;
-    }
-
-    .logo {
+      transform: translateY(-50%) rotate(-180deg);
       writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-size: 18px;
-      margin-top: 20px;
-      text-align: center;
-      line-height: 1.4;
       font-family: 'Bebas Neue', sans-serif;
-      text-transform: uppercase;
-    }
-
-    .logo .arjun {
-      font-weight: 400;
-    }
-
-    .logo .jivanjee {
-      font-weight: 700;
-    }
-
-    .menu-toggle {
-      cursor: pointer;
-      font-size: 24px;
-      margin: auto 0;
-      user-select: none;
-      transition: transform 0.3s ease;
-    }
-
-    .menu-items {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding-bottom: 20px;
-    }
-
-    .sidebar.expanded .menu-items {
-      display: flex;
-    }
-
-    .menu-items a {
-      text-decoration: none;
+      font-size: 22px;
+      letter-spacing: 2px;
       color: #111;
-      font-size: 16px;
+      z-index: 20;
     }
 
     .main {
-      margin-left: 80px;
       padding: 100px 80px;
       min-height: calc(100vh - 60px);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      transition: margin-left 0.3s ease;
-    }
-
-    .sidebar.expanded ~ .main {
-      margin-left: 240px;
     }
 
     .headline {
@@ -112,38 +52,26 @@
       font-style: italic;
     }
 
-    .disruptive-line {
-      font-family: 'Playfair Display', serif;
-      font-size: 56px;
-      font-style: italic;
-      margin-top: 20px;
-    }
-
     .bottom-band-wrapper {
       position: fixed;
       bottom: 0;
-      left: 80px;
+      left: 0;
       right: 0;
       overflow: hidden;
       white-space: nowrap;
       font-family: 'Playfair Display', serif;
-      font-size: 28px;
+      font-size: 26px;
       text-transform: uppercase;
       color: #777;
       opacity: 0.75;
       z-index: 20;
       padding: 16px 0;
       background: transparent;
-      transition: left 0.3s ease;
-    }
-
-    .sidebar.expanded ~ .bottom-band-wrapper {
-      left: 240px;
     }
 
     .bottom-band {
       display: inline-block;
-      animation: scroll-left 60s linear infinite;
+      animation: scroll-left 80s linear infinite;
     }
 
     .bottom-band-wrapper:hover .bottom-band {
@@ -151,12 +79,8 @@
     }
 
     @keyframes scroll-left {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
     }
 
     .bottom-band span {
@@ -177,29 +101,20 @@
       .bottom-band span {
         margin: 0 20px;
       }
+
+      .side-name {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="sidebar" id="sidebar">
-    <div class="logo">
-      <span class="arjun">ARJUN</span><span class="jivanjee">JIVANJEE</span>
-    </div>
-    <div class="menu-toggle" onclick="toggleSidebar()">+</div>
-    <div class="menu-items">
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
+  <div class="side-name">ARJUN JIVANJEE</div>
 
   <div class="main">
     <div class="headline">
-      WE BACK <br> — THE MOST
-    </div>
-    <div class="disruptive-line">
-      <span>DISRUPTIVE</span> FOUNDERS
+      WE BACK <br> — THE MOST <span class="highlight">DISRUPTIVE</span><br> FOUNDERS
     </div>
   </div>
 
@@ -212,16 +127,13 @@
       <span>Endure and Conquer</span> •
       <span>Have Unimpeachable Character</span> •
       <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span> •
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
       <span>Build in Service of Others</span>
     </div>
   </div>
-
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('expanded');
-    }
-  </script>
 
 </body>
 </html>
