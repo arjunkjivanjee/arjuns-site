@@ -31,21 +31,50 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
+      width: 100%;
+      height: 100%;
       font-family: var(--font-heading);
       background-color: var(--bg);
       color: var(--text-black);
-      min-height: 100vh;
-      overflow-x: hidden;
+      overflow-y: hidden;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+
+    /* ========== HORIZONTAL MENU SECTIONS ========== */
+    .menu-container {
+      display: flex;
+      height: 100vh;
+      width: max-content;
+    }
+
+    .menu-section {
+      flex: 0 0 100vw;
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-weight: 75;
+      font-style: normal;
+      font-size: 88px;
+      text-transform: uppercase;
     }
 
     /* ========== HERO SECTION ========== */
     .hero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      height: 100vh;
       padding: 0 60px;
+      pointer-events: none; /* Allows scroll underneath */
     }
 
     .hero-text {
@@ -56,39 +85,7 @@
       font-style: normal;
       text-transform: uppercase;
       max-width: 90%;
-    }
-
-    /* ========== HORIZONTAL MENU ========== */
-    .horizontal-menu {
-      width: 100%;
-      overflow-x: auto;
-      overflow-y: hidden;
-      white-space: nowrap;
-      padding: 20px 60px;
-      box-sizing: border-box;
-      background-color: var(--bg);
-      scrollbar-width: none; /* Firefox */
-    }
-    .horizontal-menu::-webkit-scrollbar {
-      display: none; /* Chrome */
-    }
-
-    .menu-scroll {
-      display: flex;
-      gap: 40px;
-    }
-
-    .menu-item {
-      font-family: var(--font-body);
-      font-size: 24px;
-      font-weight: 300;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: color 0.3s ease;
-    }
-
-    .menu-item:hover {
-      color: #555;
+      pointer-events: auto;
     }
 
     /* ========== SCROLLING BANNER ========== */
@@ -105,6 +102,7 @@
       font-size: 26px;
       opacity: 0.7;
       padding: 16px 0;
+      z-index: 10;
     }
 
     .scroll-content {
@@ -142,33 +140,25 @@
       .scroll-content span {
         margin: 0 20px;
       }
-      .horizontal-menu {
-        padding: 16px 20px;
-      }
-      .menu-item {
-        font-size: 20px;
-      }
     }
   </style>
 </head>
 
 <body>
-  <!-- ========== HERO TEXT ========== -->
+
+  <!-- ========== HORIZONTAL MENU SECTIONS ========== -->
+  <div class="menu-container">
+    <div class="menu-section">About</div>
+    <div class="menu-section">Projects</div>
+    <div class="menu-section">Essays</div>
+    <div class="menu-section">Lab</div>
+    <div class="menu-section">Contact</div>
+  </div>
+
+  <!-- ========== HERO OVERLAY ========== -->
   <div class="hero">
     <div class="hero-text">
       WE BACK — THE MOST DISRUPTIVE FOUNDERS
-    </div>
-  </div>
-
-  <!-- ========== HORIZONTAL MENU ========== -->
-  <div class="horizontal-menu">
-    <div class="menu-scroll">
-      <div class="menu-item">About</div>
-      <div class="menu-item">Projects</div>
-      <div class="menu-item">Essays</div>
-      <div class="menu-item">Lab</div>
-      <div class="menu-item">Now</div>
-      <div class="menu-item">Contact</div>
     </div>
   </div>
 
@@ -189,5 +179,6 @@
       <span>Build in Service of Others</span>
     </div>
   </div>
+
 </body>
 </html>
