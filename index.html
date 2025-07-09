@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Horizontal Scroll Page</title>
+  <title>Arjun Jivanjee</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Adobe Fonts (IvyPresto Headline) -->
+  <link rel="stylesheet" href="https://use.typekit.net/bhd3hbz.css">
+
   <style>
-    /* Base layout */
+    /* ========== ROOT VARIABLES ========== */
+    :root {
+      --font-heading: 'Bebas Neue', sans-serif;
+      --font-body: 'ivypresto-headline', serif;
+      --text-black: #04080F;
+      --text-white: #f1f1ef;
+      --bg: #f2f2f0;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -15,8 +30,9 @@
     html, body {
       height: 100vh;
       overflow: hidden;
-      font-family: serif;
-      background-color: #f2f2f0;
+      background-color: var(--bg);
+      color: var(--text-black);
+      font-family: var(--font-body);
     }
 
     .horizontal-scroll {
@@ -37,19 +53,23 @@
       align-items: center;
     }
 
-    section:nth-child(1) {
-      background-color: #f2f2f0;
+    section:nth-child(1) { background-color: #f2f2f0; }
+    section:nth-child(2) { background-color: #e0e0dc; }
+    section:nth-child(3) { background-color: #cccccc; }
+
+    h1 {
+      font-family: var(--font-body);
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-weight: 75;
+      line-height: 1.1;
     }
 
-    section:nth-child(2) {
-      background-color: #e0e0dc;
+    h1 em {
+      font-style: italic;
     }
 
-    section:nth-child(3) {
-      background-color: #cccccc;
-    }
-
-    /* Scroll-to-horizontal JS mapping */
+    /* Scroll container scrollbar hidden */
     #scrollContainer {
       scrollbar-width: none; /* Firefox */
     }
@@ -58,7 +78,7 @@
       display: none; /* Chrome/Safari */
     }
 
-    /* 🚀 Seamless Infinite Scroll Banner */
+    /* ========== SCROLL BANNER ========== */
     .scroll-banner {
       position: fixed;
       bottom: 0;
@@ -66,7 +86,7 @@
       width: 100%;
       background: transparent;
       overflow: hidden;
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: var(--font-heading);
       font-size: 26px;
       opacity: 0.7;
       padding: 16px 0;
@@ -101,12 +121,11 @@
 
 <body>
   <div class="horizontal-scroll" id="scrollContainer">
-    <section><h1>WE BACK — THE MOST DISRUPTIVE FOUNDERS</h1></section>
+    <section><h1>WE BACK — THE MOST <em>DISRUPTIVE</em> FOUNDERS</h1></section>
     <section><h1>SECTION 2</h1></section>
     <section><h1>SECTION 3</h1></section>
   </div>
 
-  <!-- Seamless scroll banner -->
   <div class="scroll-banner">
     <div class="scroll-content">
       <div class="scroll-track">
