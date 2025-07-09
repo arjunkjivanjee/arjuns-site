@@ -10,9 +10,12 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Adobe Fonts (IvyPresto Headline) -->
   <link rel="stylesheet" href="https://use.typekit.net/bhd3hbz.css">
 
   <style>
+    /* ========== ROOT VARIABLES ========== */
     :root {
       --font-heading: 'Bebas Neue', sans-serif;
       --font-body: 'ivypresto-headline', serif;
@@ -21,6 +24,7 @@
       --bg: #f1f1ef;
     }
 
+    /* ========== GLOBAL STYLES ========== */
     * {
       margin: 0;
       padding: 0;
@@ -31,7 +35,8 @@
       font-family: var(--font-heading);
       background-color: var(--bg);
       color: var(--text-black);
-      overflow: hidden; /* Prevent normal scroll */
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
     /* ========== HERO SECTION ========== */
@@ -53,29 +58,6 @@
       max-width: 90%;
     }
 
-    /* ========== HORIZONTAL SCROLL SECTION ========== */
-    .scroll-container {
-      display: flex;
-      width: 400vw; /* 4 sections x 100vw */
-      height: 100vh;
-    }
-
-    .scroll-section {
-      width: 100vw;
-      height: 100vh;
-      flex: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-right: 1px solid #ccc;
-    }
-
-    .horizontal-wrapper {
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-
     /* ========== SCROLLING BANNER ========== */
     .scroll-banner {
       position: fixed;
@@ -90,7 +72,6 @@
       font-size: 26px;
       opacity: 0.7;
       padding: 16px 0;
-      z-index: 10;
     }
 
     .scroll-content {
@@ -104,14 +85,19 @@
     }
 
     @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     .scroll-content span {
       margin: 0 32px;
     }
 
+    /* ========== RESPONSIVE STYLES ========== */
     @media (max-width: 768px) {
       .hero-text {
         font-size: 48px;
@@ -128,26 +114,20 @@
 </head>
 
 <body>
-  <!-- ========== HERO ========== -->
+  <!-- ========== HERO TEXT ========== -->
   <div class="hero">
     <div class="hero-text">
       WE BACK — THE MOST DISRUPTIVE FOUNDERS
     </div>
   </div>
 
-  <!-- ========== HORIZONTAL SCROLLING MENU ========== -->
-  <div class="horizontal-wrapper" id="horizontalWrapper">
-    <div class="scroll-container" id="scrollContainer">
-      <div class="scroll-section" style="background:#f1f1ef;"></div>
-      <div class="scroll-section" style="background:#e6e6e6;"></div>
-      <div class="scroll-section" style="background:#dadada;"></div>
-      <div class="scroll-section" style="background:#cecece;"></div>
-    </div>
-  </div>
-
-  <!-- ========== SCROLLING BANNER ========== -->
+  <!-- ========== SCROLLING VALUE BANNER ========== -->
   <div class="scroll-banner">
     <div class="scroll-content">
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span> •
       <span>Endure and Conquer</span> •
       <span>Have Unimpeachable Character</span> •
       <span>See Reality Clearly</span> •
@@ -158,16 +138,5 @@
       <span>Build in Service of Others</span>
     </div>
   </div>
-
-  <!-- ========== JS: VERTICAL TO HORIZONTAL SCROLL ========== -->
-  <script>
-    const wrapper = document.getElementById('horizontalWrapper');
-    const container = document.getElementById('scrollContainer');
-
-    wrapper.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      container.scrollLeft += e.deltaY;
-    }, { passive: false });
-  </script>
 </body>
 </html>
