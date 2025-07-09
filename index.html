@@ -8,14 +8,17 @@
   <!-- Favicon (SVG Circle) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2304080F'/%3E%3C/svg%3E">
 
-  <!-- Adobe Fonts (IvyPresto Headline) -->
+  <!-- Google Fonts: Bebas Neue -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Adobe Fonts: IvyPresto Headline -->
   <link rel="stylesheet" href="https://use.typekit.net/bhd3hbz.css">
 
   <style>
     /* ========== ROOT VARIABLES ========== */
     :root {
       --font-heading: "ivypresto-headline", serif;
-      --font-body: 'Playfair Display', serif;
+      --font-banner: 'Bebas Neue', sans-serif;
       --text-black: #04080F;
       --text-white: #f1f1ef;
       --bg: #f1f1ef;
@@ -53,6 +56,17 @@
       font-style: normal;
       text-transform: uppercase;
       max-width: 90%;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 0.4s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ========== SCROLLING BANNER ========== */
@@ -65,7 +79,7 @@
       overflow: hidden;
       white-space: nowrap;
       color: #777;
-      font-family: var(--font-heading);
+      font-family: var(--font-banner);
       font-size: 26px;
       opacity: 0.7;
       padding: 16px 0;
@@ -73,7 +87,6 @@
 
     .scroll-content {
       display: inline-block;
-      padding-left: 100%;
       animation: scroll 60s linear infinite;
     }
 
@@ -83,10 +96,10 @@
 
     @keyframes scroll {
       0% {
-        transform: translateX(0);
+        transform: translateX(0%);
       }
       100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
       }
     }
 
@@ -121,6 +134,10 @@
   <!-- ========== SCROLLING VALUE BANNER ========== -->
   <div class="scroll-banner">
     <div class="scroll-content">
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span> •
       <span>Endure and Conquer</span> •
       <span>Have Unimpeachable Character</span> •
       <span>See Reality Clearly</span> •
