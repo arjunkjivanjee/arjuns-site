@@ -3,62 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arjun Jivanjee</title>
-
-  <!-- Favicon (SVG Circle) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2304080F'/%3E%3C/svg%3E">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-  <!-- Adobe Fonts (IvyPresto Headline) -->
-  <link rel="stylesheet" href="https://use.typekit.net/bhd3hbz.css">
-
+  <title>Horizontal Scroll Page</title>
   <style>
-    /* ========== ROOT VARIABLES ========== */
-    :root {
-      --font-heading: 'Bebas Neue', sans-serif;
-      --font-body: 'ivypresto-headline', serif;
-      --text-black: #04080F;
-      --text-white: #f1f1ef;
-      --bg: #f1f1ef;
-    }
-
-    /* ========== GLOBAL STYLES ========== */
+    /* Base layout */
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    body {
-      font-family: var(--font-heading);
-      background-color: var(--bg);
-      color: var(--text-black);
-      min-height: 100vh;
-      overflow-x: hidden;
+    html, body {
+      height: 100vh;
+      overflow: hidden;
+      font-family: serif;
+      background-color: #f2f2f0;
     }
 
-    /* ========== HERO SECTION ========== */
-    .hero {
+    .horizontal-scroll {
+      display: flex;
+      width: 300vw;
+      height: 100vh;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .horizontal-scroll section {
+      min-width: 100vw;
+      height: 100vh;
+      padding: 3rem;
+      font-size: 3rem;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      height: 100vh;
-      padding: 0 60px;
     }
 
-    .hero-text {
-      font-size: 88px;
-      line-height: 1.1;
-      font-family: "ivypresto-headline", serif;
-      font-weight: 75;
-      font-style: normal;
-      text-transform: uppercase;
-      max-width: 90%;
+    section:nth-child(1) {
+      background-color: #f2f2f0;
     }
 
-    /* ========== SCROLLING BANNER ========== */
+    section:nth-child(2) {
+      background-color: #e0e0dc;
+    }
+
+    section:nth-child(3) {
+      background-color: #cccccc;
+    }
+
+    /* Scroll-to-horizontal JS mapping */
+    #scrollContainer {
+      scrollbar-width: none; /* Firefox */
+    }
+
+    #scrollContainer::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+    /* 🚀 Seamless Infinite Scroll Banner */
     .scroll-banner {
       position: fixed;
       bottom: 0;
@@ -66,74 +66,81 @@
       width: 100%;
       background: transparent;
       overflow: hidden;
-      white-space: nowrap;
-      color: #777;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 26px;
       opacity: 0.7;
       padding: 16px 0;
-    }
-
-    .scroll-track {
-      display: flex;
-      width: max-content;
-      animation: scroll 30s linear infinite;
+      white-space: nowrap;
+      z-index: 1000;
     }
 
     .scroll-content {
-      display: inline-block;
-      padding-right: 64px;
+      display: flex;
+      width: max-content;
+      animation: scroll-left 60s linear infinite;
     }
 
-    @keyframes scroll {
+    .scroll-track {
+      display: inline-flex;
+    }
+
+    .scroll-track span {
+      margin: 0 32px;
+    }
+
+    @keyframes scroll-left {
       0% {
-        transform: translateX(0);
+        transform: translateX(0%);
       }
       100% {
         transform: translateX(-50%);
-      }
-    }
-
-    /* ========== RESPONSIVE STYLES ========== */
-    @media (max-width: 768px) {
-      .hero-text {
-        font-size: 48px;
-      }
-      .scroll-banner {
-        font-size: 18px;
-        padding: 12px 0;
-      }
-      .scroll-content span {
-        margin: 0 20px;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- ========== HERO TEXT ========== -->
-  <div class="hero">
-    <div class="hero-text">
-      WE BACK — THE MOST DISRUPTIVE FOUNDERS
+  <div class="horizontal-scroll" id="scrollContainer">
+    <section><h1>WE BACK — THE MOST DISRUPTIVE FOUNDERS</h1></section>
+    <section><h1>SECTION 2</h1></section>
+    <section><h1>SECTION 3</h1></section>
+  </div>
+
+  <!-- Seamless scroll banner -->
+  <div class="scroll-banner">
+    <div class="scroll-content">
+      <div class="scroll-track">
+        <span>ENDURE AND CONQUER</span> •
+        <span>HAVE UNIMPEACHABLE CHARACTER</span> •
+        <span>SEE REALITY CLEARLY</span> •
+        <span>BUILD IN SERVICE OF OTHERS</span> •
+        <span>ENDURE AND CONQUER</span> •
+        <span>HAVE UNIMPEACHABLE CHARACTER</span> •
+        <span>SEE REALITY CLEARLY</span> •
+        <span>BUILD IN SERVICE OF OTHERS</span> •
+      </div>
+      <div class="scroll-track">
+        <span>ENDURE AND CONQUER</span> •
+        <span>HAVE UNIMPEACHABLE CHARACTER</span> •
+        <span>SEE REALITY CLEARLY</span> •
+        <span>BUILD IN SERVICE OF OTHERS</span> •
+        <span>ENDURE AND CONQUER</span> •
+        <span>HAVE UNIMPEACHABLE CHARACTER</span> •
+        <span>SEE REALITY CLEARLY</span> •
+        <span>BUILD IN SERVICE OF OTHERS</span> •
+      </div>
     </div>
   </div>
 
-  <!-- ========== SCROLLING VALUE BANNER ========== -->
-  <div class="scroll-banner">
-    <div class="scroll-track">
-      <div class="scroll-content">
-        <span>Endure and Conquer</span> •
-        <span>Have Unimpeachable Character</span> •
-        <span>See Reality Clearly</span> •
-        <span>Build in Service of Others</span> •
-      </div>
-      <div class="scroll-content">
-        <span>Endure and Conquer</span> •
-        <span>Have Unimpeachable Character</span> •
-        <span>See Reality Clearly</span> •
-        <span>Build in Service of Others</span> •
-      </div>
-    </div>
-  </div>
+  <script>
+    // Convert vertical scroll to horizontal scroll
+    const container = document.getElementById('scrollContainer');
+
+    window.addEventListener('wheel', function(e) {
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      container.scrollLeft += e.deltaY;
+    }, { passive: false });
+  </script>
 </body>
 </html>
