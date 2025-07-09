@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arjun Jivanjee</title>
 
+  <!-- Favicon (SVG Circle) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2304080F'/%3E%3C/svg%3E">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
@@ -18,67 +21,44 @@
       --font-body: 'ivypresto-headline', serif;
       --text-black: #04080F;
       --text-white: #f1f1ef;
-      --bg: #f2f2f0;
+      --bg: #f1f1ef;
     }
 
+    /* ========== GLOBAL STYLES ========== */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    html, body {
-      height: 100vh;
-      overflow: hidden;
+    body {
+      font-family: var(--font-heading);
       background-color: var(--bg);
       color: var(--text-black);
-      font-family: var(--font-body);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    .horizontal-scroll {
-      display: flex;
-      width: 300vw;
-      height: 100vh;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      scroll-behavior: smooth;
-    }
-
-    .horizontal-scroll section {
-      min-width: 100vw;
-      height: 100vh;
-      padding: 3rem;
-      font-size: 3rem;
+    /* ========== HERO SECTION ========== */
+    .hero {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      padding: 0 60px;
     }
 
-    section:nth-child(1) { background-color: #f2f2f0; }
-    section:nth-child(2) { background-color: #e0e0dc; }
-    section:nth-child(3) { background-color: #cccccc; }
-
-    h1 {
-      font-family: var(--font-body);
-      font-size: 4rem;
-      text-transform: uppercase;
-      font-weight: 75;
+    .hero-text {
+      font-size: 88px;
       line-height: 1.1;
+      font-family: "ivypresto-headline", serif;
+      font-weight: 75;
+      font-style: normal;
+      text-transform: uppercase;
+      max-width: 90%;
     }
 
-    h1 em {
-      font-style: italic;
-    }
-
-    /* Scroll container scrollbar hidden */
-    #scrollContainer {
-      scrollbar-width: none; /* Firefox */
-    }
-
-    #scrollContainer::-webkit-scrollbar {
-      display: none; /* Chrome/Safari */
-    }
-
-    /* ========== SCROLL BANNER ========== */
+    /* ========== SCROLLING BANNER ========== */
     .scroll-banner {
       position: fixed;
       bottom: 0;
@@ -86,80 +66,77 @@
       width: 100%;
       background: transparent;
       overflow: hidden;
-      font-family: var(--font-heading);
+      white-space: nowrap;
+      color: #777;
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 26px;
       opacity: 0.7;
       padding: 16px 0;
-      white-space: nowrap;
-      z-index: 1000;
     }
 
     .scroll-content {
-      display: flex;
-      width: max-content;
-      animation: scroll-left 60s linear infinite;
+      display: inline-block;
+      padding-left: 0;
+      animation: scroll 60s linear infinite;
     }
 
-    .scroll-track {
-      display: inline-flex;
+    .scroll-banner:hover .scroll-content {
+      animation-play-state: paused;
     }
 
-    .scroll-track span {
-      margin: 0 32px;
-    }
-
-    @keyframes scroll-left {
+    @keyframes scroll {
       0% {
-        transform: translateX(0%);
+        transform: translateX(0);
       }
       100% {
         transform: translateX(-50%);
+      }
+    }
+
+    .scroll-content span {
+      margin: 0 32px;
+    }
+
+    /* ========== RESPONSIVE STYLES ========== */
+    @media (max-width: 768px) {
+      .hero-text {
+        font-size: 48px;
+      }
+      .scroll-banner {
+        font-size: 18px;
+        padding: 12px 0;
+      }
+      .scroll-content span {
+        margin: 0 20px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="horizontal-scroll" id="scrollContainer">
-    <section><h1>WE BACK — THE MOST <em>DISRUPTIVE</em> FOUNDERS</h1></section>
-    <section><h1>SECTION 2</h1></section>
-    <section><h1>SECTION 3</h1></section>
-  </div>
-
-  <div class="scroll-banner">
-    <div class="scroll-content">
-      <div class="scroll-track">
-        <span>ENDURE AND CONQUER</span> •
-        <span>HAVE UNIMPEACHABLE CHARACTER</span> •
-        <span>SEE REALITY CLEARLY</span> •
-        <span>BUILD IN SERVICE OF OTHERS</span> •
-        <span>ENDURE AND CONQUER</span> •
-        <span>HAVE UNIMPEACHABLE CHARACTER</span> •
-        <span>SEE REALITY CLEARLY</span> •
-        <span>BUILD IN SERVICE OF OTHERS</span> •
-      </div>
-      <div class="scroll-track">
-        <span>ENDURE AND CONQUER</span> •
-        <span>HAVE UNIMPEACHABLE CHARACTER</span> •
-        <span>SEE REALITY CLEARLY</span> •
-        <span>BUILD IN SERVICE OF OTHERS</span> •
-        <span>ENDURE AND CONQUER</span> •
-        <span>HAVE UNIMPEACHABLE CHARACTER</span> •
-        <span>SEE REALITY CLEARLY</span> •
-        <span>BUILD IN SERVICE OF OTHERS</span> •
-      </div>
+  <!-- ========== HERO TEXT ========== -->
+  <div class="hero">
+    <div class="hero-text">
+      WE BACK — THE MOST DISRUPTIVE FOUNDERS
     </div>
   </div>
 
-  <script>
-    // Convert vertical scroll to horizontal scroll
-    const container = document.getElementById('scrollContainer');
-
-    window.addEventListener('wheel', function(e) {
-      if (e.deltaY === 0) return;
-      e.preventDefault();
-      container.scrollLeft += e.deltaY;
-    }, { passive: false });
-  </script>
+  <!-- ========== SCROLLING VALUE BANNER ========== -->
+  <div class="scroll-banner">
+    <div class="scroll-content">
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span> •
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span> •
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span>
+    </div>
+  </div>
 </body>
 </html>
