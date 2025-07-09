@@ -74,13 +74,17 @@
       padding: 16px 0;
     }
 
-    .scroll-content {
-      display: inline-block;
-      padding-left: 0;
+    .scroll-wrapper {
+      display: flex;
+      width: max-content;
       animation: scroll 60s linear infinite;
     }
 
-    .scroll-banner:hover .scroll-content {
+    .scroll-content {
+      display: inline-flex;
+    }
+
+    .scroll-banner:hover .scroll-wrapper {
       animation-play-state: paused;
     }
 
@@ -123,19 +127,27 @@
 
   <!-- ========== SCROLLING VALUE BANNER ========== -->
   <div class="scroll-banner">
-    <div class="scroll-content">
-      <span>Endure and Conquer</span> •
-      <span>Have Unimpeachable Character</span> •
-      <span>See Reality Clearly</span> •
-      <span>Build in Service of Others</span> •
-      <span>Endure and Conquer</span> •
-      <span>Have Unimpeachable Character</span> •
-      <span>See Reality Clearly</span> •
-      <span>Build in Service of Others</span> •
-      <span>Endure and Conquer</span> •
-      <span>Have Unimpeachable Character</span> •
-      <span>See Reality Clearly</span> •
-      <span>Build in Service of Others</span>
+    <div class="scroll-wrapper">
+      <div class="scroll-content">
+        <span>Endure and Conquer</span> •
+        <span>Have Unimpeachable Character</span> •
+        <span>See Reality Clearly</span> •
+        <span>Build in Service of Others</span> •
+        <span>Endure and Conquer</span> •
+        <span>Have Unimpeachable Character</span> •
+        <span>See Reality Clearly</span> •
+        <span>Build in Service of Others</span> •
+      </div>
+      <div class="scroll-content">
+        <span>Endure and Conquer</span> •
+        <span>Have Unimpeachable Character</span> •
+        <span>See Reality Clearly</span> •
+        <span>Build in Service of Others</span> •
+        <span>Endure and Conquer</span> •
+        <span>Have Unimpeachable Character</span> •
+        <span>See Reality Clearly</span> •
+        <span>Build in Service of Others</span> •
+      </div>
     </div>
   </div>
 </body>
