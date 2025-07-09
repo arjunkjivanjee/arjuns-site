@@ -58,6 +58,39 @@
       max-width: 90%;
     }
 
+    /* ========== HORIZONTAL MENU ========== */
+    .horizontal-menu {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      padding: 20px 60px;
+      box-sizing: border-box;
+      background-color: var(--bg);
+      scrollbar-width: none; /* Firefox */
+    }
+    .horizontal-menu::-webkit-scrollbar {
+      display: none; /* Chrome */
+    }
+
+    .menu-scroll {
+      display: flex;
+      gap: 40px;
+    }
+
+    .menu-item {
+      font-family: var(--font-body);
+      font-size: 24px;
+      font-weight: 300;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+    }
+
+    .menu-item:hover {
+      color: #555;
+    }
+
     /* ========== SCROLLING BANNER ========== */
     .scroll-banner {
       position: fixed;
@@ -109,6 +142,12 @@
       .scroll-content span {
         margin: 0 20px;
       }
+      .horizontal-menu {
+        padding: 16px 20px;
+      }
+      .menu-item {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -118,6 +157,18 @@
   <div class="hero">
     <div class="hero-text">
       WE BACK — THE MOST DISRUPTIVE FOUNDERS
+    </div>
+  </div>
+
+  <!-- ========== HORIZONTAL MENU ========== -->
+  <div class="horizontal-menu">
+    <div class="menu-scroll">
+      <div class="menu-item">About</div>
+      <div class="menu-item">Projects</div>
+      <div class="menu-item">Essays</div>
+      <div class="menu-item">Lab</div>
+      <div class="menu-item">Now</div>
+      <div class="menu-item">Contact</div>
     </div>
   </div>
 
