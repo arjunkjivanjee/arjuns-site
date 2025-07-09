@@ -74,18 +74,18 @@
       padding: 16px 0;
     }
 
-    .scroll-wrapper {
+    .scroll-content {
       display: flex;
       width: max-content;
       animation: scroll 60s linear infinite;
     }
 
-    .scroll-content {
+    .scroll-track {
       display: inline-flex;
     }
 
-    .scroll-banner:hover .scroll-wrapper {
-      animation-play-state: paused;
+    .scroll-content span {
+      margin: 0 32px;
     }
 
     @keyframes scroll {
@@ -95,10 +95,6 @@
       100% {
         transform: translateX(-50%);
       }
-    }
-
-    .scroll-content span {
-      margin: 0 32px;
     }
 
     /* ========== RESPONSIVE STYLES ========== */
@@ -121,14 +117,14 @@
   <!-- ========== HERO TEXT ========== -->
   <div class="hero">
     <div class="hero-text">
-      WE BACK — THE MOST DISRUPTIVE FOUNDERS
+      WE BACK — THE MOST <span style="font-style: italic;">disruptive</span> FOUNDERS
     </div>
   </div>
 
   <!-- ========== SCROLLING VALUE BANNER ========== -->
   <div class="scroll-banner">
-    <div class="scroll-wrapper">
-      <div class="scroll-content">
+    <div class="scroll-content">
+      <div class="scroll-track">
         <span>Endure and Conquer</span> •
         <span>Have Unimpeachable Character</span> •
         <span>See Reality Clearly</span> •
@@ -138,7 +134,7 @@
         <span>See Reality Clearly</span> •
         <span>Build in Service of Others</span> •
       </div>
-      <div class="scroll-content">
+      <div class="scroll-track">
         <span>Endure and Conquer</span> •
         <span>Have Unimpeachable Character</span> •
         <span>See Reality Clearly</span> •
