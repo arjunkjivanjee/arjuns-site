@@ -24,27 +24,37 @@
       --bg: #f1f1ef;
     }
 
-    /* ========== GLOBAL STYLES ========== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
+      height: 100%;
+      overflow: hidden;
       font-family: var(--font-heading);
       background-color: var(--bg);
       color: var(--text-black);
-      min-height: 100vh;
-      overflow-x: hidden;
     }
 
-    /* ========== HERO SECTION ========== */
-    .hero {
+    /* === Scroll Container === */
+    .scroll-container {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      width: 200vw;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .section {
+      height: 100vh;
+      width: 100vw;
+      flex-shrink: 0;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      height: 100vh;
       padding: 0 60px;
     }
 
@@ -58,7 +68,6 @@
       max-width: 90%;
     }
 
-    /* ========== SCROLLING BANNER ========== */
     .scroll-banner {
       position: fixed;
       bottom: 0;
@@ -97,35 +106,16 @@
       margin: 0 32px;
     }
 
-    /* ========== RIGHT PANEL SECTION ========== */
     .right-panel {
-      position: sticky;
-      top: 0;
-      right: 0;
-      float: right;
-      width: 40%;
-      height: 100vh;
-      padding: 60px;
       background-color: #e7e7e4;
       font-family: var(--font-body);
       font-style: italic;
       font-weight: 100;
       font-size: 20px;
-      opacity: 0;
-      transform: translateX(40px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      padding: 60px;
+      width: 100%;
     }
 
-    .right-panel.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .spacer {
-      height: 1600px;
-    }
-
-    /* ========== RESPONSIVE STYLES ========== */
     @media (max-width: 768px) {
       .hero-text {
         font-size: 48px;
@@ -137,21 +127,11 @@
       .scroll-content span {
         margin: 0 20px;
       }
-      .right-panel {
-        display: none;
-      }
     }
   </style>
 </head>
 
 <body>
-  <!-- ========== HERO TEXT ========== -->
-  <div class="hero">
-    <div class="hero-text">
-      WE BACK — THE MOST <span style="font-style: italic; font-weight: 50;">DISRUPTIVE</span> FOUNDERS
-    </div>
-  </div>
-
   <!-- ========== SCROLLING VALUE BANNER ========== -->
   <div class="scroll-banner">
     <div class="scroll-content">
@@ -170,23 +150,32 @@
     </div>
   </div>
 
-  <!-- ========== SPACER CONTENT ========== -->
-  <div class="spacer"></div>
+  <!-- ========== SCROLL CONTAINER ========== -->
+  <div class="scroll-container" id="scrollContainer">
+    <!-- Hero Section -->
+    <div class="section">
+      <div class="hero-text">
+        WE BACK — THE MOST <span style="font-style: italic; font-weight: 50;">DISRUPTIVE</span> FOUNDERS
+      </div>
+    </div>
 
-  <!-- ========== RIGHT PANEL ========== -->
-  <div class="right-panel" id="rightPanel">
-    Here’s a side note. As you scroll further, ideas reveal themselves.
+    <!-- Right Panel Section -->
+    <div class="section">
+      <div class="right-panel">
+        Here’s a side note. As you scroll down, the site moves right. Use this to reveal more about you or your work.
+      </div>
+    </div>
   </div>
 
+  <!-- ========== JS: Bind vertical to horizontal scroll ========== -->
   <script>
-    const rightPanel = document.getElementById('rightPanel');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        rightPanel.classList.add('visible');
-      } else {
-        rightPanel.classList.remove('visible');
+    const container = document.getElementById('scrollContainer');
+    window.addEventListener('wheel', function (e) {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        container.scrollLeft += e.deltaY;
       }
-    });
+    }, { passive: false });
   </script>
 </body>
 </html>
