@@ -187,12 +187,13 @@
     </div>
   </div>
 
-  <!-- ========== JS TO CONVERT VERTICAL SCROLL TO HORIZONTAL ========== -->
+  <!-- ========== SCRIPT TO CONVERT VERTICAL SCROLL TO HORIZONTAL ========== -->
   <script>
     const wrapper = document.getElementById('scrollWrapper');
     const container = document.getElementById('scrollContainer');
 
     wrapper.addEventListener('wheel', function(e) {
+      // Convert vertical scroll to horizontal movement
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         e.preventDefault();
         container.scrollLeft += e.deltaY;
