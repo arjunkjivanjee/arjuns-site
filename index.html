@@ -74,14 +74,15 @@
       padding: 16px 0;
     }
 
-    .scroll-content {
-      display: inline-block;
-      padding-left: 0;
-      animation: scroll 60s linear infinite;
+    .scroll-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 30s linear infinite;
     }
 
-    .scroll-banner:hover .scroll-content {
-      animation-play-state: paused;
+    .scroll-content {
+      display: inline-block;
+      padding-right: 64px;
     }
 
     @keyframes scroll {
@@ -91,10 +92,6 @@
       100% {
         transform: translateX(-50%);
       }
-    }
-
-    .scroll-content span {
-      margin: 0 32px;
     }
 
     /* ========== RESPONSIVE STYLES ========== */
@@ -123,19 +120,19 @@
 
   <!-- ========== SCROLLING VALUE BANNER ========== -->
   <div class="scroll-banner">
-    <div class="scroll-content">
-      <span>Endure and Conquer</span> •
-      <span>Have Unimpeachable Character</span> •
-      <span>See Reality Clearly</span> •
-      <span>Build in Service of Others</span> •
-      <span>Endure and Conquer</span> •
-      <span>Have Unimpeachable Character</span> •
-      <span>See Reality Clearly</span> •
-      <span>Build in Service of Others</span> •
-      <span>Endure and Conquer</span> •
-      <span>Have Unimpeachable Character</span> •
-      <span>See Reality Clearly</span> •
-      <span>Build in Service of Others</span>
+    <div class="scroll-track">
+      <div class="scroll-content">
+        <span>Endure and Conquer</span> •
+        <span>Have Unimpeachable Character</span> •
+        <span>See Reality Clearly</span> •
+        <span>Build in Service of Others</span> •
+      </div>
+      <div class="scroll-content">
+        <span>Endure and Conquer</span> •
+        <span>Have Unimpeachable Character</span> •
+        <span>See Reality Clearly</span> •
+        <span>Build in Service of Others</span> •
+      </div>
     </div>
   </div>
 </body>
