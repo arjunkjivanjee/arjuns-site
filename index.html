@@ -75,17 +75,13 @@
     }
 
     .scroll-content {
-      display: flex;
-      width: max-content;
+      display: inline-block;
+      padding-left: 0;
       animation: scroll 60s linear infinite;
     }
 
-    .scroll-track {
-      display: inline-flex;
-    }
-
-    .scroll-content span {
-      margin: 0 32px;
+    .scroll-banner:hover .scroll-content {
+      animation-play-state: paused;
     }
 
     @keyframes scroll {
@@ -95,6 +91,10 @@
       100% {
         transform: translateX(-50%);
       }
+    }
+
+    .scroll-content span {
+      margin: 0 32px;
     }
 
     /* ========== RESPONSIVE STYLES ========== */
@@ -117,33 +117,25 @@
   <!-- ========== HERO TEXT ========== -->
   <div class="hero">
     <div class="hero-text">
-      WE BACK — THE MOST <span style="font-style: italic;">disruptive</span> FOUNDERS
+      WE BACK — THE MOST DISRUPTIVE FOUNDERS
     </div>
   </div>
 
   <!-- ========== SCROLLING VALUE BANNER ========== -->
   <div class="scroll-banner">
     <div class="scroll-content">
-      <div class="scroll-track">
-        <span>Endure and Conquer</span> •
-        <span>Have Unimpeachable Character</span> •
-        <span>See Reality Clearly</span> •
-        <span>Build in Service of Others</span> •
-        <span>Endure and Conquer</span> •
-        <span>Have Unimpeachable Character</span> •
-        <span>See Reality Clearly</span> •
-        <span>Build in Service of Others</span> •
-      </div>
-      <div class="scroll-track">
-        <span>Endure and Conquer</span> •
-        <span>Have Unimpeachable Character</span> •
-        <span>See Reality Clearly</span> •
-        <span>Build in Service of Others</span> •
-        <span>Endure and Conquer</span> •
-        <span>Have Unimpeachable Character</span> •
-        <span>See Reality Clearly</span> •
-        <span>Build in Service of Others</span> •
-      </div>
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span> •
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span> •
+      <span>Endure and Conquer</span> •
+      <span>Have Unimpeachable Character</span> •
+      <span>See Reality Clearly</span> •
+      <span>Build in Service of Others</span>
     </div>
   </div>
 </body>
