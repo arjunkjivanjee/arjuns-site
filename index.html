@@ -24,37 +24,27 @@
       --bg: #f1f1ef;
     }
 
+    /* ========== GLOBAL STYLES ========== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-      overflow: hidden;
+    body {
       font-family: var(--font-heading);
       background-color: var(--bg);
       color: var(--text-black);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    /* === Scroll Container === */
-    .scroll-container {
-      display: flex;
-      flex-direction: row;
-      height: 100vh;
-      width: 200vw;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      scroll-behavior: smooth;
-    }
-
-    .section {
-      height: 100vh;
-      width: 100vw;
-      flex-shrink: 0;
+    /* ========== HERO SECTION ========== */
+    .hero {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
       padding: 0 60px;
     }
 
@@ -68,6 +58,7 @@
       max-width: 90%;
     }
 
+    /* ========== SCROLLING BANNER ========== */
     .scroll-banner {
       position: fixed;
       bottom: 0;
@@ -106,16 +97,7 @@
       margin: 0 32px;
     }
 
-    .right-panel {
-      background-color: #e7e7e4;
-      font-family: var(--font-body);
-      font-style: italic;
-      font-weight: 100;
-      font-size: 20px;
-      padding: 60px;
-      width: 100%;
-    }
-
+    /* ========== RESPONSIVE STYLES ========== */
     @media (max-width: 768px) {
       .hero-text {
         font-size: 48px;
@@ -132,6 +114,13 @@
 </head>
 
 <body>
+  <!-- ========== HERO TEXT ========== -->
+  <div class="hero">
+    <div class="hero-text">
+      WE BACK — THE MOST <span style="font-style: italic; font-weight: 50;">DISRUPTIVE</span> FOUNDERS
+    </div>
+  </div>
+
   <!-- ========== SCROLLING VALUE BANNER ========== -->
   <div class="scroll-banner">
     <div class="scroll-content">
@@ -149,33 +138,5 @@
       <span>Build in Service of Others</span>
     </div>
   </div>
-
-  <!-- ========== SCROLL CONTAINER ========== -->
-  <div class="scroll-container" id="scrollContainer">
-    <!-- Hero Section -->
-    <div class="section">
-      <div class="hero-text">
-        WE BACK — THE MOST <span style="font-style: italic; font-weight: 50;">DISRUPTIVE</span> FOUNDERS
-      </div>
-    </div>
-
-    <!-- Right Panel Section -->
-    <div class="section">
-      <div class="right-panel">
-        Here’s a side note. As you scroll down, the site moves right. Use this to reveal more about you or your work.
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== JS: Bind vertical to horizontal scroll ========== -->
-  <script>
-    const container = document.getElementById('scrollContainer');
-    window.addEventListener('wheel', function (e) {
-      if (e.deltaY !== 0) {
-        e.preventDefault();
-        container.scrollLeft += e.deltaY;
-      }
-    }, { passive: false });
-  </script>
 </body>
 </html>
