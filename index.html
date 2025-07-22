@@ -2,17 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site Offline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arjun Jivanjee</title>
+
+  <!-- Favicon (Dark Circle) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2304080F'/%3E%3C/svg%3E">
+
+  <!-- Adobe Fonts (Coronette) -->
+  <link rel="stylesheet" href="https://use.typekit.net/bhd3hbz.css">
+
   <style>
-    html, body {
+    /* ========== ROOT VARIABLES ========== */
+    :root {
+      --font-main: "coronette", serif;
+      --text-black: #04080F;
+      --bg: #f1f1ef;
+    }
+
+    /* ========== GLOBAL STYLES ========== */
+    * {
       margin: 0;
-      height: 100%;
-      background: url('background.png') no-repeat center center fixed;
-      background-size: cover;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg);
+      color: var(--text-black);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .intro-text {
+      font-size: 2.5rem;
+      font-family: var(--font-main);
+      font-weight: 400;
+      text-shadow: 0.3px 0 0 currentColor, 0 0.3px 0 currentColor;
     }
   </style>
 </head>
+
 <body>
+  <div class="intro-text">
+    Hello, I am Arjun Jivanjee.
+  </div>
 </body>
 </html>
