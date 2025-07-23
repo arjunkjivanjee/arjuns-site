@@ -38,7 +38,14 @@
       overflow: hidden;
     }
 
-    /* Background image layer */
+    .intro-text {
+      position: relative;
+      z-index: 0;
+      font-size: 2.5rem;
+      font-family: var(--font-main);
+      font-weight: 400;
+    }
+
     .bg-image {
       position: absolute;
       top: 0;
@@ -50,29 +57,16 @@
       background-repeat: no-repeat;
       background-position: center;
       opacity: 0.085;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .intro-text {
-      position: relative;
       z-index: 1;
-      font-size: 2.5rem;
-      font-family: var(--font-main);
-      font-weight: 400;
-      text-shadow:
-        0.4px 0 0 currentColor,
-        0 0.4px 0 currentColor,
-       -0.2px 0 0 currentColor,
-        0 -0.2px 0 currentColor;
+      pointer-events: none;
     }
   </style>
 </head>
 
 <body>
-  <div class="bg-image"></div>
   <div class="intro-text">
     Hello, I am Arjun Jivanjee.
   </div>
+  <div class="bg-image"></div>
 </body>
 </html>
