@@ -8,15 +8,11 @@
   <!-- Favicon (Dark Circle) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2304080F'/%3E%3C/svg%3E">
 
-  <!-- Adobe Fonts (Coronette) -->
-  <link rel="stylesheet" href="https://use.typekit.net/bhd3hbz.css">
-
-  <!-- Andale Mono -->
+  <!-- Andale Mono Font -->
   <link rel="stylesheet" href="https://use.typekit.net/bhd3hbz.css">
 
   <style>
     :root {
-      --font-main: "coronette", serif;
       --font-mono: andale-mono-mt-pro, sans-serif;
       --text-black: #04080F;
       --bg: #f1f1ef;
@@ -30,14 +26,17 @@
 
     body {
       position: relative;
-      font-family: var(--font-main);
+      font-family: var(--font-mono);
+      font-style: normal;
+      font-weight: 400;
       background-color: var(--bg);
       color: var(--text-black);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      padding: 2rem;
+      text-align: center;
     }
 
     .background-image {
@@ -55,23 +54,7 @@
       z-index: -1;
     }
 
-    .intro-text {
-      position: relative;
-      z-index: 0;
-      text-align: center;
-    }
-
-    .intro-text h1 {
-      font-size: 2.5rem;
-      font-family: var(--font-main);
-      font-weight: 400;
-      margin-bottom: 2rem;
-    }
-
     .bio-text {
-      font-family: var(--font-mono);
-      font-style: normal;
-      font-weight: 400;
       font-size: 1.1rem;
       line-height: 1.8rem;
       white-space: pre-line;
@@ -82,17 +65,14 @@
 <body>
   <div class="background-image"></div>
 
-  <div class="intro-text">
-    <h1>Hello, I am Arjun Jivanjee.</h1>
-    <div class="bio-text">
-      Hi, I’m Arjun Jivanjee.
+  <div class="bio-text">
+    Hi, I’m Arjun Jivanjee.
 
-      Currently, I’m studying Molecular Biology.
+    Currently, I’m studying Molecular Biology.
 
-      Previously I helped Archer Newton teach students better systems to learn and helped scale his business to over $200K ARR.
+    Previously I helped Archer Newton teach students better systems to learn and helped scale his business to over $200K ARR.
 
-      In my spare time I like to read, train calisthenics and run.
-    </div>
+    In my spare time I like to read, train calisthenics and run.
   </div>
 </body>
 </html>
