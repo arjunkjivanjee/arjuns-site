@@ -36,21 +36,43 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .intro-container {
+      z-index: 0;
     }
 
     .intro-text {
-      position: relative;
-      z-index: 0;
       font-size: 2.5rem;
       font-family: var(--font-main);
       font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    .bio-text {
+      font-family: helvetica-lt-pro, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
     }
   </style>
 </head>
 
 <body>
-  <div class="intro-text">
-    Hello, I am Arjun Jivanjee.
+  <div class="intro-container">
+    <div class="intro-text">
+      Hello, I am Arjun Jivanjee.
+    </div>
+    <div class="bio-text">
+      Currently, I’m studying molecular biology.<br><br>
+      Previously I helped Archer Newton teach students better systems to learn and helped scale his business to over $200K ARR.<br><br>
+      In my spare time I like to read, train calisthenics and run.
+    </div>
   </div>
 </body>
 </html>
