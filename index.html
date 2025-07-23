@@ -11,15 +11,17 @@
   <!-- Adobe Fonts (Coronette) -->
   <link rel="stylesheet" href="https://use.typekit.net/bhd3hbz.css">
 
+  <!-- Andale Mono -->
+  <link rel="stylesheet" href="https://use.typekit.net/bhd3hbz.css">
+
   <style>
-    /* ========== ROOT VARIABLES ========== */
     :root {
       --font-main: "coronette", serif;
+      --font-mono: andale-mono-mt-pro, sans-serif;
       --text-black: #04080F;
       --bg: #f1f1ef;
     }
 
-    /* ========== GLOBAL STYLES ========== */
     * {
       margin: 0;
       padding: 0;
@@ -38,19 +40,59 @@
       overflow: hidden;
     }
 
+    .background-image {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('paperbackground.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.08;
+      z-index: -1;
+    }
+
     .intro-text {
       position: relative;
       z-index: 0;
+      text-align: center;
+    }
+
+    .intro-text h1 {
       font-size: 2.5rem;
       font-family: var(--font-main);
       font-weight: 400;
+      margin-bottom: 2rem;
+    }
+
+    .bio-text {
+      font-family: var(--font-mono);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+      white-space: pre-line;
     }
   </style>
 </head>
 
 <body>
+  <div class="background-image"></div>
+
   <div class="intro-text">
-    Hello, I am Arjun Jivanjee.
+    <h1>Hello, I am Arjun Jivanjee.</h1>
+    <div class="bio-text">
+      Hi, I’m Arjun Jivanjee.
+
+      Currently, I’m studying Molecular Biology.
+
+      Previously I helped Archer Newton teach students better systems to learn and helped scale his business to over $200K ARR.
+
+      In my spare time I like to read, train calisthenics and run.
+    </div>
   </div>
 </body>
 </html>
