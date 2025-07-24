@@ -16,6 +16,8 @@
       --font: 'IBM Plex Mono', sans-serif;
       --text-black: #04080F;
       --bg: #f1f1ef;
+      --hover-bg: #cce4ff;
+      --hover-text: #003366;
     }
 
     * {
@@ -42,9 +44,14 @@
     }
 
     .inline-link {
-      font-weight: bold;
-      color: var(--text-black);
       text-decoration: underline;
+      color: var(--text-black);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .inline-link:hover {
+      background-color: var(--hover-bg);
+      color: var(--hover-text);
     }
   </style>
 </head>
