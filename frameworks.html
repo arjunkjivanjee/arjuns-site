@@ -47,14 +47,16 @@
 
     nav a {
       text-decoration: underline;
+      text-decoration-color: currentColor;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
       color: inherit;
       padding: 0.1rem 0.3rem;
-      transition: background-color 0.2s ease, color 0.2s ease;
+      transition: all 0.2s ease;
     }
 
     nav a:hover {
-      color: white;
-      background-color: blue;
+      text-decoration-style: dotted;
     }
 
     .container {
