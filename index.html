@@ -41,7 +41,7 @@
     .container {
       max-width: 700px;
       margin: 0 auto;
-      text-align: left; /* Left-aligned text */
+      text-align: left;
     }
 
     .bio-text {
@@ -50,11 +50,15 @@
 
     .inline-link {
       text-decoration: underline;
+      text-decoration-style: solid;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
       color: var(--text-black);
-      transition: background-color 0.2s ease, color 0.2s ease;
+      transition: all 0.2s ease;
     }
 
     .inline-link:hover {
+      text-decoration-style: dotted;
       background-color: var(--hover-bg);
       color: var(--hover-text);
     }
