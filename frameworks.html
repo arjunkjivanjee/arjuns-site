@@ -33,6 +33,27 @@
       font-size: 1rem;
     }
 
+    /* Sticky vertical nav */
+    nav {
+      position: fixed;
+      top: 1rem;
+      left: 1.5rem;
+      font-size: 0.9rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      display: block;
+      margin-bottom: 0.25rem;
+      text-decoration: underline;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: blue;
+    }
+
     .container {
       max-width: 700px;
       margin: 0 auto;
@@ -78,6 +99,12 @@
 </head>
 
 <body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="frameworks.html">Frameworks</a>
+  </nav>
+
   <div class="container">
     <h1>Frameworks</h1>
 
