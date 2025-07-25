@@ -33,17 +33,28 @@
       font-size: 1rem;
     }
 
-    /* Horizontal nav aligned with h1 */
+    /* Horizontal nav in top-left corner */
     nav {
-      text-align: center;
-      margin-bottom: 1.5rem;
+      position: absolute;
+      top: 2rem;
+      left: 3rem;
       font-size: 1rem;
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+      z-index: 1000;
     }
 
     nav a {
       text-decoration: underline;
       color: inherit;
-      margin: 0 0.2rem;
+      padding: 0.1rem 0.3rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: white;
+      background-color: blue;
     }
 
     .container {
@@ -92,15 +103,16 @@
 
 <body>
 
-  <div class="container">
-    <nav>
-      <a href="index.html">Home</a> / <a href="frameworks.html">Frameworks</a>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="frameworks.html">Frameworks</a>
+  </nav>
 
+  <div class="container">
     <h1>Frameworks</h1>
 
     <h2>Decision Making</h2>
-
     <h3>Is your Blood Boiling?</h3>
     <ul>
       <li>Avoid indifference when choosing a pursuit</li>
@@ -113,7 +125,6 @@
     </ul>
 
     <h2>Planning</h2>
-
     <h3>Immutable Planning</h3>
     <ul>
       <li>For planning far into the future, focus on what will not change (about the world, about you…)</li>
@@ -139,7 +150,6 @@
     </ul>
 
     <h2>Execution</h2>
-
     <h3>Running Pack Theory</h3>
     <ul>
       <li>You will end up wherever is acceptable to you, be clear on what is acceptable</li>
@@ -167,7 +177,6 @@
     </ul>
 
     <h2>Risk</h2>
-
     <h3>Quotes</h3>
     <ul>
       <li>“Never risk what you have and need for what you don’t have and don’t need.” – Buffett</li>
