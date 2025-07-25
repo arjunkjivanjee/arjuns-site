@@ -33,25 +33,17 @@
       font-size: 1rem;
     }
 
-    /* Sticky vertical nav */
+    /* Horizontal nav aligned with h1 */
     nav {
-      position: fixed;
-      top: 1rem;
-      left: 1.5rem;
-      font-size: 0.9rem;
-      z-index: 1000;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
     }
 
     nav a {
-      display: block;
-      margin-bottom: 0.25rem;
       text-decoration: underline;
       color: inherit;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: blue;
+      margin: 0 0.2rem;
     }
 
     .container {
@@ -100,12 +92,11 @@
 
 <body>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="frameworks.html">Frameworks</a>
-  </nav>
-
   <div class="container">
+    <nav>
+      <a href="index.html">Home</a> / <a href="frameworks.html">Frameworks</a>
+    </nav>
+
     <h1>Frameworks</h1>
 
     <h2>Decision Making</h2>
