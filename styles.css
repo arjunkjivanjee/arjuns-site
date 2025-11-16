@@ -879,7 +879,7 @@ img {
   top: 12px;
   left: 108px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 29px;
