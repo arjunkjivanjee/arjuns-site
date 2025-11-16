@@ -906,6 +906,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2px;
   width: 80px;
   height: 25px;
   backdrop-filter: blur(10px);
@@ -915,7 +916,7 @@ img {
 }
 
 .container-109 {
-  display: none;
+  display: block;
 }
 
 .text-110 {
@@ -946,6 +947,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2px;
   width: 83px;
   height: 25px;
   backdrop-filter: blur(10px);
@@ -955,7 +957,7 @@ img {
 }
 
 .container-113 {
-  display: none;
+  display: block;
 }
 
 .text-114 {
