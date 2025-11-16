@@ -879,7 +879,7 @@ img {
   top: 12px;
   left: 108px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 29px;
@@ -887,6 +887,7 @@ img {
   backdrop-filter: blur(10px);
   background-color: rgba(30, 30, 30, 0.067);
   border-radius: 2px;
+  padding: 7px 8px;
 }
 
 .svg-106 {
@@ -895,6 +896,8 @@ img {
 }
 
 .ellipse-2-107 {
+  width: 11px;
+  height: 11px;
   fill: rgba(0, 0, 0, 1);
 }
 
