@@ -16,7 +16,6 @@
   color: var(--text-rgb-30-30-30);
 }
 
-
 /* CSS Reset */
 * {
   margin: 0;
@@ -35,12 +34,11 @@ img {
   height: auto;
 }
 
-/* Main container */
+/* Main container - positioned relative to allow absolute children */
 .this-one-1 {
   position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 40px 48px;
+  width: 1920px;
+  height: 1563px;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -58,11 +56,11 @@ img {
   }
 }
 
-/* Title */
+/* Title "Writing" - positioned at x: 2705, y: -1150 (relative to frame at 2596, -1295) = 109, 145 */
 .text-2 {
   position: absolute;
-  top: 40px;
-  left: 48px;
+  top: 145px;
+  left: 109px;
   font-family: var(--font-family-gentium-book-plus);
   font-weight: normal;
   font-size: 105.30000305175781px;
@@ -71,16 +69,17 @@ img {
   color: var(--text-rgb-30-30-30);
 }
 
-/* Top navigation bar with filters */
+/* Top filter bar (Date/Name/Type) - positioned at x: 3201, y: -1014 = 605, 281 */
 .horizontalborder-3 {
   position: absolute;
-  top: 170px;
-  left: 48px;
+  top: 281px;
+  left: 605px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 0;
-  width: calc(100% - 450px);
+  width: 1207px;
+  height: 25px;
   padding: 0 0 7px 0;
   border-bottom: 1px solid rgba(30, 30, 30, 1);
 }
@@ -90,12 +89,18 @@ img {
   flex-direction: row;
   align-items: center;
   gap: 4px;
-  flex: 0 0 auto;
+  width: 142px;
+  height: 18px;
 }
 
 .container-5 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 1px 0 2px 0;
+  width: 5px;
+  height: 18px;
 }
 
 .text-6 {
@@ -121,13 +126,18 @@ img {
   flex-direction: row;
   align-items: center;
   gap: 4px;
-  flex: 1;
-  margin-left: 20px;
+  width: 852px;
+  height: 18px;
 }
 
 .container-9 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 1px 0 2px 0;
+  width: 5px;
+  height: 18px;
 }
 
 .text-10 {
@@ -153,13 +163,18 @@ img {
   flex-direction: row;
   align-items: center;
   gap: 4px;
-  flex: 0 0 auto;
-  margin-left: 20px;
+  width: 213px;
+  height: 18px;
 }
 
 .container-13 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 1px 0 2px 0;
+  width: 5px;
+  height: 18px;
 }
 
 .text-14 {
@@ -180,16 +195,17 @@ img {
   color: var(--text-rgb-30-30-30);
 }
 
-/* Filter row */
+/* Filter/Clear Filters bar - positioned at x: 2704, y: -1014 = 108, 281 */
 .horizontalborder-16 {
   position: absolute;
-  top: 205px;
-  left: 48px;
+  top: 281px;
+  left: 108px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 50px;
-  width: calc(100% - 450px);
+  gap: 121.33000183105469px;
+  width: 426px;
+  height: 25px;
   padding: 0 0 7px 0;
   border-bottom: 1px solid rgba(30, 30, 30, 1);
 }
@@ -199,11 +215,18 @@ img {
   flex-direction: row;
   align-items: center;
   gap: 4px;
+  width: 213px;
+  height: 18px;
 }
 
 .container-18 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 1px 0 2px 0;
+  width: 5px;
+  height: 18px;
 }
 
 .text-19 {
@@ -226,7 +249,12 @@ img {
 
 .button-21 {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1px 0 2px 0;
+  width: 86px;
+  height: 18px;
 }
 
 .text-22 {
@@ -238,11 +266,13 @@ img {
   color: var(--text-rgb-30-30-30);
 }
 
-/* Type filter button */
+/* Type filter button - positioned at x: 2704, y: -976 = 108, 319 */
 .container-23 {
   position: absolute;
-  top: 240px;
-  left: 48px;
+  top: 319px;
+  left: 108px;
+  width: 213.330078125px;
+  height: 18px;
 }
 
 .button-24 {
@@ -250,15 +280,22 @@ img {
   flex-direction: row;
   align-items: flex-start;
   gap: 8px;
+  padding: 0 140.3300018310547px 0 0;
 }
 
 .svg-margin-25 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 6px 0 0 0;
+  width: 10px;
+  height: 12px;
 }
 
 .svg-26 {
-  flex: 0 0 auto;
+  width: 10px;
+  height: 6px;
 }
 
 .vector-27 {
@@ -266,7 +303,8 @@ img {
 }
 
 .svg-28 {
-  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
 }
 
 .vector-29 {
@@ -275,7 +313,11 @@ img {
 
 .container-30 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  width: 29px;
+  height: 18px;
 }
 
 .text-31 {
@@ -287,11 +329,13 @@ img {
   color: var(--text-rgb-30-30-30);
 }
 
-/* Topic filter button */
+/* Topic filter button - positioned at x: 2917, y: -976 = 321, 319 */
 .container-32 {
   position: absolute;
-  top: 240px;
-  left: 148px;
+  top: 319px;
+  left: 321px;
+  width: 213.169921875px;
+  height: 18px;
 }
 
 .button-33 {
@@ -299,15 +343,22 @@ img {
   flex-direction: row;
   align-items: flex-start;
   gap: 8px;
+  padding: 0 137.1699981689453px 0 0;
 }
 
 .svg-margin-34 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 6px 0 0 0;
+  width: 10px;
+  height: 12px;
 }
 
 .svg-35 {
-  flex: 0 0 auto;
+  width: 10px;
+  height: 6px;
 }
 
 .vector-36 {
@@ -315,7 +366,8 @@ img {
 }
 
 .svg-37 {
-  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
 }
 
 .vector-38 {
@@ -324,7 +376,11 @@ img {
 
 .container-39 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  width: 32px;
+  height: 18px;
 }
 
 .text-40 {
@@ -336,11 +392,13 @@ img {
   color: var(--text-rgb-30-30-30);
 }
 
-/* All the decorative SVG elements - positioned absolutely */
+/* Left column of SVG dots - positioned at x: 2700, starting at y: -178 = 104, 1117 */
 .svg-41 {
   position: absolute;
-  top: 280px;
-  left: 50px;
+  top: 1117px;
+  left: 104px;
+  width: 8px;
+  height: 8px;
 }
 
 .vector-42 {
@@ -349,8 +407,10 @@ img {
 
 .svg-43 {
   position: absolute;
-  top: 330px;
-  left: 50px;
+  top: 1305px;
+  left: 104px;
+  width: 8px;
+  height: 8px;
 }
 
 .vector-44 {
@@ -359,8 +419,10 @@ img {
 
 .svg-45 {
   position: absolute;
-  top: 380px;
-  left: 50px;
+  top: 1493px;
+  left: 104px;
+  width: 8px;
+  height: 8px;
 }
 
 .vector-46 {
@@ -369,8 +431,10 @@ img {
 
 .svg-47 {
   position: absolute;
-  top: 430px;
-  left: 50px;
+  top: 1681px;
+  left: 104px;
+  width: 8px;
+  height: 8px;
 }
 
 .vector-48 {
@@ -379,8 +443,10 @@ img {
 
 .svg-49 {
   position: absolute;
-  top: 480px;
-  left: 50px;
+  top: 1869px;
+  left: 104px;
+  width: 8px;
+  height: 8px;
 }
 
 .vector-50 {
@@ -389,8 +455,10 @@ img {
 
 .svg-51 {
   position: absolute;
-  top: 530px;
-  left: 50px;
+  top: 2057px;
+  left: 104px;
+  width: 8px;
+  height: 8px;
 }
 
 .vector-52 {
@@ -399,8 +467,10 @@ img {
 
 .svg-53 {
   position: absolute;
-  top: 580px;
-  left: 50px;
+  top: 2245px;
+  left: 104px;
+  width: 8px;
+  height: 8px;
 }
 
 .vector-54 {
@@ -409,8 +479,10 @@ img {
 
 .svg-55 {
   position: absolute;
-  top: 630px;
-  left: 50px;
+  top: 2433px;
+  left: 104px;
+  width: 8px;
+  height: 8px;
 }
 
 .vector-56 {
@@ -419,28 +491,255 @@ img {
 
 .svg-57 {
   position: absolute;
-  top: 680px;
-  left: 50px;
+  top: 2621px;
+  left: 104px;
+  width: 8px;
+  height: 8px;
 }
 
 .vector-58 {
   fill: rgba(30, 30, 30, 1);
 }
 
-/* Contact section top right */
+/* Middle column of SVG dots - positioned at x: 2913, starting at y: -178 = 317, 1117 */
+.svg-68 {
+  position: absolute;
+  top: 1117px;
+  left: 317px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-69 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-70 {
+  position: absolute;
+  top: 1305px;
+  left: 317px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-71 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-72 {
+  position: absolute;
+  top: 1493px;
+  left: 317px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-73 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-74 {
+  position: absolute;
+  top: 1681px;
+  left: 317px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-75 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-76 {
+  position: absolute;
+  top: 1869px;
+  left: 317px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-77 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-78 {
+  position: absolute;
+  top: 2057px;
+  left: 317px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-79 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-80 {
+  position: absolute;
+  top: 2245px;
+  left: 317px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-81 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-82 {
+  position: absolute;
+  top: 2433px;
+  left: 317px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-83 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-84 {
+  position: absolute;
+  top: 2621px;
+  left: 317px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-85 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+/* Right area SVG dots - positioned at x: 3126-4404, starting at y: -178 = 530-1808, 1117 */
+.svg-86 {
+  position: absolute;
+  top: 1117px;
+  left: 530px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-87 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-88 {
+  position: absolute;
+  top: 1305px;
+  left: 530px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-89 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-90 {
+  position: absolute;
+  top: 1493px;
+  left: 530px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-91 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-92 {
+  position: absolute;
+  top: 1681px;
+  left: 530px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-93 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-94 {
+  position: absolute;
+  top: 1869px;
+  left: 530px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-95 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-96 {
+  position: absolute;
+  top: 2057px;
+  left: 530px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-97 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-98 {
+  position: absolute;
+  top: 2245px;
+  left: 530px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-99 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-100 {
+  position: absolute;
+  top: 2433px;
+  left: 530px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-101 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+.svg-102 {
+  position: absolute;
+  top: 2621px;
+  left: 530px;
+  width: 8px;
+  height: 8px;
+}
+
+.vector-103 {
+  fill: rgba(30, 30, 30, 1);
+}
+
+/* Contact section at top right - positioned at x: 3982, y: -162 = 1386, 1133 */
 .container-59 {
   position: absolute;
-  top: 40px;
-  right: 48px;
+  top: 1133px;
+  right: 250px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4px;
+  width: 284px;
+  height: 18px;
 }
 
 .container-60 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 1px 0 2px 0;
+  width: 5px;
+  height: 18px;
 }
 
 .text-61 {
@@ -461,14 +760,17 @@ img {
   color: var(--text-rgb-30-30-30);
 }
 
-/* Contact links */
+/* Contact links - positioned at x: 3982, y: -128 = 1386, 1167 */
 .container-63 {
   position: absolute;
-  top: 70px;
-  right: 48px;
+  top: 1167px;
+  right: 250px;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2px;
+  width: 284px;
+  height: 18.5px;
 }
 
 @media (max-width: 1440px) {
@@ -485,10 +787,14 @@ img {
 
 .link-64 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 3px 6px 3.5px 6px;
+  width: 43px;
+  height: 18.5px;
   border: 1px solid rgba(30, 30, 30, 0.27);
   border-radius: 3px;
-  min-width: 100px;
 }
 
 @media (max-width: 1440px) {
@@ -518,10 +824,14 @@ img {
 
 .link-66 {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 3px 6px 3.5px 6px;
+  width: 66px;
+  height: 18.5px;
   border: 1px solid rgba(30, 30, 30, 0.27);
   border-radius: 3px;
-  min-width: 100px;
 }
 
 @media (max-width: 1440px) {
@@ -549,192 +859,11 @@ img {
   color: var(--text-rgb-30-30-30);
 }
 
-/* More decorative SVG elements on right side */
-.svg-68 {
-  position: absolute;
-  top: 280px;
-  right: 250px;
-}
-
-.vector-69 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-70 {
-  position: absolute;
-  top: 330px;
-  right: 250px;
-}
-
-.vector-71 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-72 {
-  position: absolute;
-  top: 380px;
-  right: 250px;
-}
-
-.vector-73 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-74 {
-  position: absolute;
-  top: 430px;
-  right: 250px;
-}
-
-.vector-75 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-76 {
-  position: absolute;
-  top: 480px;
-  right: 250px;
-}
-
-.vector-77 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-78 {
-  position: absolute;
-  top: 530px;
-  right: 250px;
-}
-
-.vector-79 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-80 {
-  position: absolute;
-  top: 580px;
-  right: 250px;
-}
-
-.vector-81 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-82 {
-  position: absolute;
-  top: 630px;
-  right: 250px;
-}
-
-.vector-83 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-84 {
-  position: absolute;
-  top: 680px;
-  right: 250px;
-}
-
-.vector-85 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-86 {
-  position: absolute;
-  top: 280px;
-  right: 350px;
-}
-
-.vector-87 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-88 {
-  position: absolute;
-  top: 330px;
-  right: 350px;
-}
-
-.vector-89 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-90 {
-  position: absolute;
-  top: 380px;
-  right: 350px;
-}
-
-.vector-91 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-92 {
-  position: absolute;
-  top: 430px;
-  right: 350px;
-}
-
-.vector-93 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-94 {
-  position: absolute;
-  top: 480px;
-  right: 350px;
-}
-
-.vector-95 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-96 {
-  position: absolute;
-  top: 530px;
-  right: 350px;
-}
-
-.vector-97 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-98 {
-  position: absolute;
-  top: 580px;
-  right: 350px;
-}
-
-.vector-99 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-100 {
-  position: absolute;
-  top: 630px;
-  right: 350px;
-}
-
-.vector-101 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-.svg-102 {
-  position: absolute;
-  top: 680px;
-  right: 350px;
-}
-
-.vector-103 {
-  fill: rgba(30, 30, 30, 1);
-}
-
-/* Count indicator */
+/* Count text "(0)" - positioned at x: 3005, y: -1164 = 409, 131 */
 .text-104 {
   position: absolute;
-  top: 40px;
-  right: 200px;
+  top: 131px;
+  left: 409px;
   font-family: var(--font-family-inter);
   font-weight: 300;
   font-size: 18.100000381469727px;
@@ -743,19 +872,21 @@ img {
   color: var(--text-rgb-30-30-30);
 }
 
-/* Bottom navigation - positioned at bottom left */
+/* Bottom left navigation links - positioned at x: 2704-2823, y: -1284 = 108-227, 11 */
 .link-105 {
-  position: fixed;
-  bottom: 40px;
-  left: 48px;
+  position: absolute;
+  top: 11px;
+  left: 108px;
+  width: 29px;
+  height: 25px;
   backdrop-filter: blur(10px);
-  background-color: rgba(30, 30, 30, 0.07);
+  background-color: rgba(30, 30, 30, 0.067);
   border-radius: 2px;
-  padding: 4px 8px;
 }
 
 .svg-106 {
-  flex: 0 0 auto;
+  width: 13px;
+  height: 15px;
 }
 
 .ellipse-2-107 {
@@ -763,20 +894,19 @@ img {
 }
 
 .link-108 {
-  position: fixed;
-  bottom: 40px;
-  left: 100px;
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
+  position: absolute;
+  top: 11px;
+  left: 142px;
+  width: 80px;
+  height: 25px;
   backdrop-filter: blur(10px);
-  background-color: rgba(30, 30, 30, 0.07);
+  background-color: rgba(30, 30, 30, 0.067);
   border-radius: 2px;
-  padding: 4px 8px;
 }
 
 .container-109 {
-  flex: 0 0 auto;
+  width: 20px;
+  height: 12px;
 }
 
 .text-110 {
@@ -800,20 +930,19 @@ img {
 }
 
 .link-112 {
-  position: fixed;
-  bottom: 40px;
-  left: 200px;
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
+  position: absolute;
+  top: 11px;
+  left: 227px;
+  width: 83px;
+  height: 25px;
   backdrop-filter: blur(10px);
-  background-color: rgba(30, 30, 30, 0.07);
+  background-color: rgba(30, 30, 30, 0.067);
   border-radius: 2px;
-  padding: 4px 8px;
 }
 
 .container-113 {
-  flex: 0 0 auto;
+  width: 18px;
+  height: 12px;
 }
 
 .text-114 {
