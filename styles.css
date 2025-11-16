@@ -879,7 +879,6 @@ img {
   top: 12px;
   left: 108px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 29px;
@@ -887,12 +886,10 @@ img {
   backdrop-filter: blur(10px);
   background-color: rgba(30, 30, 30, 0.067);
   border-radius: 2px;
-  padding: 7px 8px;
 }
 
 .svg-106 {
-  width: 13px;
-  height: 15px;
+  display: none;
 }
 
 .ellipse-2-107 {
@@ -907,9 +904,8 @@ img {
   top: 12px;
   left: 142px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 0;
+  justify-content: center;
   width: 80px;
   height: 25px;
   backdrop-filter: blur(10px);
@@ -919,14 +915,13 @@ img {
 }
 
 .container-109 {
-  width: 20px;
-  height: 12px;
+  display: none;
 }
 
 .text-110 {
   font-family: var(--font-family-inter);
   font-weight: 300;
-  font-size: 12px;
+  font-size: 13.3px;
   letter-spacing: -1px;
   line-height: 12px;
   text-transform: uppercase;
@@ -936,7 +931,7 @@ img {
 .text-111 {
   font-family: var(--font-family-inter);
   font-weight: 300;
-  font-size: 10.699999809265137px;
+  font-size: 12px;
   letter-spacing: -0.30000001192092896px;
   line-height: 12px;
   text-transform: uppercase;
@@ -949,9 +944,8 @@ img {
   top: 12px;
   left: 227px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 0;
+  justify-content: center;
   width: 83px;
   height: 25px;
   backdrop-filter: blur(10px);
@@ -961,14 +955,13 @@ img {
 }
 
 .container-113 {
-  width: 18px;
-  height: 12px;
+  display: none;
 }
 
 .text-114 {
   font-family: var(--font-family-inter);
   font-weight: 300;
-  font-size: 12px;
+  font-size: 13.3px;
   letter-spacing: -1px;
   line-height: 12px;
   text-transform: uppercase;
@@ -978,7 +971,7 @@ img {
 .text-115 {
   font-family: var(--font-family-inter);
   font-weight: 300;
-  font-size: 10.5px;
+  font-size: 11.8px;
   letter-spacing: -0.30000001192092896px;
   line-height: 12px;
   text-transform: uppercase;
