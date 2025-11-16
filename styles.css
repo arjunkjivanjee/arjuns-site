@@ -166,7 +166,7 @@ img {
 .button-24 {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   gap: 8px;
   padding: 0 140.3300018310547px 0 0;
   height: 18px;
@@ -175,17 +175,17 @@ img {
 .svg-margin-25 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   width: 10px;
   height: 18px;
+  transform: translateY(-1px);
 }
 
 .svg-26 {
   width: 10px;
   height: 6px;
-  margin-bottom: 2px;
 }
 
 .vector-27 {
@@ -195,8 +195,6 @@ img {
 .svg-28 {
   width: 18px;
   height: 18px;
-  display: flex;
-  align-items: flex-end;
 }
 
 .vector-29 {
@@ -206,7 +204,7 @@ img {
 .container-30 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   width: 29px;
   height: 18px;
@@ -217,7 +215,7 @@ img {
   font-weight: 300;
   font-size: 13.100000381469727px;
   letter-spacing: -0.41999998688697815px;
-  line-height: 14px;
+  line-height: 18px;
   color: var(--text-rgb-30-30-30);
 }
 
@@ -233,7 +231,7 @@ img {
 .button-33 {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   gap: 8px;
   padding: 0 137.1699981689453px 0 0;
   height: 18px;
@@ -242,17 +240,17 @@ img {
 .svg-margin-34 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   width: 10px;
   height: 18px;
+  transform: translateY(-1px);
 }
 
 .svg-35 {
   width: 10px;
   height: 6px;
-  margin-bottom: 2px;
 }
 
 .vector-36 {
@@ -262,8 +260,6 @@ img {
 .svg-37 {
   width: 18px;
   height: 18px;
-  display: flex;
-  align-items: flex-end;
 }
 
 .vector-38 {
@@ -273,7 +269,7 @@ img {
 .container-39 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   width: 32px;
   height: 18px;
@@ -284,7 +280,7 @@ img {
   font-weight: 300;
   font-size: 13.300000190734863px;
   letter-spacing: -0.41999998688697815px;
-  line-height: 14px;
+  line-height: 18px;
   color: var(--text-rgb-30-30-30);
 }
 
