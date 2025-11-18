@@ -56,10 +56,10 @@ img {
   }
 }
 
-/* Title "Writing" - centered */
+/* Title "Writing" - centered at x: 3281, y: 517 relative to frame at 2485, 366 = 796, 151 */
 .text-2 {
   position: absolute;
-  top: 145.9px;
+  top: 151px;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-family-gentium-book-plus);
@@ -70,9 +70,18 @@ img {
   color: var(--text-rgb-30-30-30);
 }
 
-/* Superscript (0) - hidden */
+/* Superscript (4) - shown at x: 3580, y: 517 = 1095, 151 */
 .text-104 {
-  display: none;
+  position: absolute;
+  top: 153px;
+  left: 50%;
+  transform: translateX(150px);
+  font-family: var(--font-family-inter);
+  font-weight: 300;
+  font-size: 18.100000381469727px;
+  letter-spacing: -0.6000000238418579px;
+  line-height: 20px;
+  color: var(--text-rgb-30-30-30);
 }
 
 /* Filter/Clear Filters bar - HIDDEN */
@@ -90,10 +99,10 @@ img {
   display: none;
 }
 
-/* Top date/name/type bar - centered below title */
+/* Top date/name/topic bar - centered at x: 2912, y: 669 relative to frame = 427, 303 */
 .horizontalborder-3 {
   position: absolute;
-  top: 270px;
+  top: 303px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
