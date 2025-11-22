@@ -27,6 +27,12 @@ env = load_env_vars()
 NOTION_TOKEN = os.environ.get("NOTION_TOKEN") or env.get("NOTION_TOKEN")
 DATABASE_ID = os.environ.get("DATABASE_ID") or env.get("DATABASE_ID")
 
+# Debug output
+print(f"DEBUG: NOTION_TOKEN from os.environ: {'Found' if os.environ.get('NOTION_TOKEN') else 'Not found'}")
+print(f"DEBUG: DATABASE_ID from os.environ: {'Found' if os.environ.get('DATABASE_ID') else 'Not found'}")
+print(f"DEBUG: NOTION_TOKEN from .env: {'Found' if env.get('NOTION_TOKEN') else 'Not found'}")
+print(f"DEBUG: DATABASE_ID from .env: {'Found' if env.get('DATABASE_ID') else 'Not found'}")
+
 if not NOTION_TOKEN or not DATABASE_ID:
     print("Error: Missing NOTION_TOKEN or DATABASE_ID. Set them in .env or as environment variables.")
     exit(1)
